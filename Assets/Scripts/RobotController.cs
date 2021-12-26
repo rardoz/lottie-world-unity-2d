@@ -17,17 +17,32 @@ public class RobotController : MonoBehaviour
     }
 
     // Update is called once per frame
+
+	void MoveToPositionOverride(){
+		Vector3 newPos = transform.position;
+		newPos.x = 200;
+		transform.position = newPos;
+		Camera.main.GetComponent<CameraFollow>().speed = 1000;
+	}
     void Update()
     {
-        moveX = Input.GetAxis ("Horizontal");//Gives us of one if we are moving via the arrow keys
-        PlayerMove();
-        Jump();
-        //if we are moving left but not facing left flip, and vice versa
-        if (moveX > 0 && !facingLeft) {
-            Flip ();
-        } else if (moveX < 0 && facingLeft) {
-            Flip ();
-        }
+		if(Input.GetKeyDown(KeyCode.Backslash)) {
+			MoveToPositionOverride();
+			return;
+		} else {
+			moveX = Input.GetAxis ("Horizontal");//Gives us of one if we are moving via the arrow keys
+
+			if(moveX != 0) {
+				PlayerMove();
+				Jump();
+				//if we are moving left but not facing left flip, and vice versa
+				if (moveX > 0 && !facingLeft) {
+					Flip ();
+				} else if (moveX < 0 && facingLeft) {
+					Flip ();
+				}
+			}
+		}
     }
 
      void PlayerMove() {

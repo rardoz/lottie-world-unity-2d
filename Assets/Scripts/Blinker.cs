@@ -32,12 +32,10 @@ public class Blinker : MonoBehaviour
         spriteBlinkingTotalTimer += Time.deltaTime;
         if(spriteBlinkingTotalTimer >= spriteBlinkingTotalDuration)
         {
-              startBlinking = false;
-             spriteBlinkingTotalTimer = 0.0f;
-             this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;   // according to
-                      //your sprite
-
-             return;
+            startBlinking = false;
+			spriteBlinkingTotalTimer = 0.0f;
+			this.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
+			return;
           }
 
      spriteBlinkingTimer += Time.deltaTime;

@@ -7,6 +7,8 @@ public class DeathPlant : Death
    public Blinker blinker;
     void OnTriggerEnter2D(Collider2D c2d)
     {
+
+		// TODO THROTTLE THE FUNCTION!
 		bool isPlayer = c2d.CompareTag("Player");
 
 		//Destroy the life if Object tagged Player comes in contact with it

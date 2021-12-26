@@ -9,14 +9,16 @@ public class ParallaxBackground : MonoBehaviour
 	private Transform cameraTransform;
 	Vector3 lastCameraPosition;
 
-	private void Start(){
+	private void Start()
+	{
 		cameraTransform = Camera.main.transform;
 		lastCameraPosition = cameraTransform.position;
 	}
 
-	private void Update(){
+	private void Update()
+	{
 		Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
-		transform.position += new Vector3(deltaMovement.x *parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y);
+		transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y);
 		lastCameraPosition = cameraTransform.position;
 	}
 }
