@@ -52,6 +52,9 @@ TagManager:
   - name: Awards
     uniqueID: 4120486425
     locked: 0
+  - name: Lights
+    uniqueID: 2395543271
+    locked: 0
   - name: Modal
     uniqueID: 1597222585
     locked: 0
