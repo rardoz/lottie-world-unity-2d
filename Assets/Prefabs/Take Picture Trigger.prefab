@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7328663390356383193
+--- !u!1 &3006658706532066922
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7328663390356383192}
-  - component: {fileID: 7328663390356383194}
-  - component: {fileID: 7328663390356383195}
+  - component: {fileID: 3006658706532066923}
+  - component: {fileID: 3006658706532066921}
+  - component: {fileID: 3006658706532066920}
   m_Layer: 0
   m_Name: Take Picture Trigger
-  m_TagString: Untagged
+  m_TagString: PictureTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7328663390356383192
+--- !u!4 &3006658706532066923
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7328663390356383193}
+  m_GameObject: {fileID: 3006658706532066922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3006658705323607229}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7328663390356383194
+--- !u!61 &3006658706532066921
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7328663390356383193}
+  m_GameObject: {fileID: 3006658706532066922}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -58,16 +59,110 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27485466, y: 6.5176983}
   m_EdgeRadius: 0
---- !u!114 &7328663390356383195
+--- !u!114 &3006658706532066920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7328663390356383193}
+  m_GameObject: {fileID: 3006658706532066922}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89b002c47bb864043a0b9fb139f4ab24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   photographer: {fileID: 0}
+  whenFacingLeft: 1
+  polaroid: {fileID: 3006658706836286050}
+--- !u!1001 &213492562273831499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3006658706532066923}
+    m_Modifications:
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672552271607, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: m_Name
+      value: Polaroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120913672991072297, guid: d79214657c20a4015a92857af0fbabfe,
+        type: 3}
+      propertyPath: itemCounter
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d79214657c20a4015a92857af0fbabfe, type: 3}
+--- !u!4 &3006658705323607229 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3120913672552271606, guid: d79214657c20a4015a92857af0fbabfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 213492562273831499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3006658706836286050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3120913672991072297, guid: d79214657c20a4015a92857af0fbabfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 213492562273831499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47781dd5f8d545f5808951ff9532786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

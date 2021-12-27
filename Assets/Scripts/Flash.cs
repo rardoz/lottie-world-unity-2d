@@ -23,7 +23,6 @@ public class Flash : MonoBehaviour
 		spriteBlinkingTotalTimer += Time.deltaTime;
 		if (flashCount >= maxFlashes || spriteBlinkingTotalTimer >= spriteBlinkingTotalDuration)
 		{
-			Debug.Log("Flash!! 0");
 			startBlinking = false;
 			spriteBlinkingTotalTimer = 0.0f;
 			renderer.enabled = false;
@@ -36,12 +35,10 @@ public class Flash : MonoBehaviour
 			spriteBlinkingTimer = 0.0f;
 			if (renderer.enabled == true)
 			{
-				Debug.Log("Flash!! 1");
 				renderer.enabled = false;
 			}
 			else
 			{
-				Debug.Log("Flash!! 2");
 				renderer.enabled = true;
 			}
 			flashCount++;

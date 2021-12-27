@@ -6,10 +6,8 @@ public class TakePicture : MonoBehaviour
 {
 	public Photographer photographer;
 	public bool whenFacingLeft;
-	// Start is called before the first frame update
 
-	// Update is called once per frame
-
+	public Polaroid polaroid;
 	void Awake()
 	{
 		//Make Collider2D as trigger
@@ -18,11 +16,18 @@ public class TakePicture : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D c2d)
 	{
-		//Destroy the life if Object tagged Player comes in contact with it
-		if (c2d.CompareTag("Player") && photographer.player.facingLeft == whenFacingLeft)
+		if (c2d.CompareTag("Photographer") && photographer.player.facingLeft == whenFacingLeft)
 		{
 			photographer.OnTakePhoto();
-			Destroy(gameObject);
+			SpriteRenderer renderer = polaroid.GetComponent<SpriteRenderer>();
+			renderer.enabled = true;
+
+			Animation anim = polaroid.GetComponent<Animation>();
+
+			anim["FeatherAnimation"].speed = 1;
+			anim.Play("FeatherAnimation");
+			GetComponent<Collider2D>().enabled = false;
+			polaroid.itemEnabled = true;
 		}
 	}
 }

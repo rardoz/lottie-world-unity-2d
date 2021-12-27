@@ -131,4 +131,13 @@ public class Photographer : MonoBehaviour
 			}
 		}
 	}
+
+
+	void OnCollisionEnter2D(Collision2D Col)
+	{
+		if (Col.gameObject.tag != "PictureTrigger")
+		{
+			Physics2D.IgnoreCollision(Col.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+		}
+	}
 }

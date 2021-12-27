@@ -9,6 +9,9 @@ TagManager:
   - Weapon
   - Enemy
   - Deadly
+  - Polaroid
+  - Photographer
+  - PictureTrigger
   layers:
   - Default
   - TransparentFX
