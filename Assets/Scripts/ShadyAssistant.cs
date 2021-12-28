@@ -12,9 +12,9 @@ using UnityEngine;
 	✅ Anytime the shady camera assistant gets a polaroid lottie losses a life
 	✅ If lottie touches the camera assistant lottie looses a life
 	✅ should face the direction its moving towards
-	• If the camera assistant gets hit in the head, it must leave the scene and come back to get the polaroid
-	• If the camera assitant gets hit in the head then it cant pick up polaroids or hurt you
-	• If the camera assistant gets hit in the head then it nees to blink to indicate that it was hurt
+	✅ If the camera assistant gets hit in the head, it must leave the scene and come back to get the polaroid
+	✅ If the camera assitant gets hit in the head then it cant pick up polaroids or hurt you
+	✅ If the camera assistant gets hit in the head then it nees to blink to indicate that it was hurt
 */
 
 public class ShadyAssistant : Death
