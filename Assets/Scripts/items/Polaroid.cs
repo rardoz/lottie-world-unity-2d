@@ -14,8 +14,12 @@ using UnityEngine;
 */
 public class Polaroid : Item
 {
-	private void Update()
+	public override bool ShouldTriggerEnter2D(Collider2D c2d)
 	{
-
+		if (c2d.gameObject.tag == "ShadyCameraAssistant")
+		{
+			Destroy(gameObject);
+		}
+		return true;
 	}
 }

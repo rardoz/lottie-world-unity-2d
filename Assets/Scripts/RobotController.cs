@@ -81,7 +81,7 @@ public class RobotController : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D Col)
 	{
-		if (Col.gameObject.tag == "Ground" || Col.gameObject.tag == "ground")
+		if (Col.gameObject.tag == "Ground")
 		{
 			JumpCount = MaxJumps;
 		}

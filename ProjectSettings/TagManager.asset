@@ -12,6 +12,8 @@ TagManager:
   - Polaroid
   - Photographer
   - PictureTrigger
+  - ShadyCameraAssistant
+  - Squish
   layers:
   - Default
   - TransparentFX

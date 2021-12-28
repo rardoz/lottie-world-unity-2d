@@ -6,11 +6,12 @@ using UnityEngine;
 	Shady Assistant will:
 
 	✅ Come in and out of the frame
-	• Come into the scene when a photo has touched the ground
-	• Will go towards the photo to pick it up
-	• Once it picks it up it will leave the scene
-	• Anytime the shady camera assistant gets a polaroid lottie losses a life
-	• If lottie touches the camera assistant lottie looses a life
+	✅ Come into the scene when a photo has touched the ground
+	✅ Will go towards the photo to pick it up
+	✅ Once it picks it up it will leave the scene
+	✅ Anytime the shady camera assistant gets a polaroid lottie losses a life
+	✅ If lottie touches the camera assistant lottie looses a life
+	✅ should face the direction its moving towards
 	• If the camera assistant gets hit in the head, it must leave the scene and come back to get the polaroid
 	• If the camera assitant gets hit in the head then it cant pick up polaroids or hurt you
 	• If the camera assistant gets hit in the head then it nees to blink to indicate that it was hurt
@@ -19,13 +20,19 @@ using UnityEngine;
 public class ShadyAssistant : Death
 {
 	// Start is called before the first frame update
-	public bool shouldEnterScene = false;
 	public bool shouldEnterFromLeft = true;
-	public bool shouldExitScene = false;
+
+	public ArrayList polaroids = new ArrayList();
+
+	public static int cameraOffset = 10;
 	Animation anim;
+
+	Blinker blinker;
+
 	void Start()
 	{
 		anim = gameObject.GetComponent<Animation>();
+		blinker = gameObject.GetComponent<Blinker>();
 	}
 
 	// Update is called once per frame
@@ -33,50 +40,54 @@ public class ShadyAssistant : Death
 	{
 		EnterOrLeaveScene();
 	}
+	void Flip()
+	{
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
 
 	void EnterOrLeaveScene()
 	{
-		if (shouldEnterScene)
+		Vector2 prevPos = transform.position;
+		if (!blinker.startBlinking && polaroids.Count > 0)
 		{
-			if (shouldEnterFromLeft)
+			transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), .03f);
+		}
+		else
+		{
+			transform.position = Vector3.MoveTowards(transform.position, new Vector2(player.transform.position.x - cameraOffset, transform.position.y), .03f);
+		}
+
+		if (transform.position.x - prevPos.x > 0)
+		{
+			if (transform.localScale.x < 0)
 			{
-				EnterFromLeft();
+				Flip();
 			}
-			else
+		}
+		else
+		{
+			if (transform.localScale.x > 0)
 			{
-				EnterFromRight();
+				Flip();
 			}
 		}
 	}
 
-	void EnterFromRight()
-	{
-		//todo flip the sprite
-		anim["ShadyAssistantAnimation"].speed = -1;
-		anim.Play("ShadyAssistantAnimation");
-		shouldEnterScene = false;
-		shouldEnterFromLeft = true;
-	}
-
-	void EnterFromLeft()
-	{
-		anim["ShadyAssistantAnimation"].speed = 1;
-		anim.Play("ShadyAssistantAnimation");
-		shouldEnterScene = false;
-		shouldEnterFromLeft = false;
-	}
-
 	void OnTriggerEnter2D(Collider2D c2d)
 	{
-
-		bool isPlayer = c2d.CompareTag("Player");
-		bool isPhoto = c2d.CompareTag("Polaroid");
-		if (isPlayer || isPhoto)
+		if (!blinker.startBlinking)
 		{
-			//Add life to counter
-			totalLives--;
-			//Test: Print total number of lives
-			Debug.Log("You currently have " + Death.totalLives + " lives.");
+			bool isPhoto = c2d.CompareTag("Polaroid");
+			if (isPhoto)
+			{
+				polaroids.Remove(c2d.gameObject);
+			}
+			else
+			{
+				OnTriggerEntered(c2d);
+			}
 		}
 	}
 }

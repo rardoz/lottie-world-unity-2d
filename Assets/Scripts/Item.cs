@@ -23,21 +23,26 @@ public class Item : MonoBehaviour
 		GetComponent<Collider2D>().isTrigger = true;
 	}
 
+	protected void OnCollected()
+	{
+		itemCounter.items++;
+		Destroy(gameObject);
+	}
+
 	void OnTriggerEnter2D(Collider2D c2d)
 	{
-		if (ShouldTriggerEnter2D(c2d))
+		if (itemEnabled && itemCounter && ShouldTriggerEnter2D(c2d))
 		{
-			if (itemEnabled && c2d.CompareTag("Player") && itemCounter)
+			if (c2d.CompareTag("Player"))
 			{
-				itemCounter.items++;
-				Destroy(gameObject);
+				OnCollected();
 			}
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D Col)
 	{
-		if (ShouldTrigggerCollisionEnter2D(Col))
+		if (itemEnabled && itemCounter && ShouldTrigggerCollisionEnter2D(Col))
 		{
 			//do stuff
 		}

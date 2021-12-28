@@ -10,7 +10,7 @@ public class Ground : MonoBehaviour
 	{
 		if (c2d.gameObject.tag == "Polaroid")
 		{
-			assistant.shouldEnterScene = true;
+			assistant.polaroids.Add(c2d.gameObject);
 			Debug.Log("Triggering Assistant");
 		}
 	}
