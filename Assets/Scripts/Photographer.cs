@@ -10,7 +10,7 @@ using UnityEngine;
 	• only take photos if player gets salad?
 	✅ should follow the user
 	✅ should always be facing the user
-	• should dispense photos
+	✅ should dispense photos
 	✅ should have Flash animation
 	----
 
