@@ -12,7 +12,7 @@ using UnityEngine;
 	•
 
 */
-public class Polaroid : Item
+public class Polaroid : Score
 {
 	public override bool ShouldTriggerEnter2D(Collider2D c2d)
 	{

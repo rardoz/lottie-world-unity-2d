@@ -80,6 +80,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -143,7 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47781dd5f8d545f5808951ff9532786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemCounter: {fileID: 0}
+  scoreCounter: {fileID: 0}
+  shouldDestroy: 1
+  scoreValue: 100
   itemEnabled: 0
 --- !u!61 &3120913672991072302
 BoxCollider2D:
