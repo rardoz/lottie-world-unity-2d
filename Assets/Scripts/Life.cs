@@ -5,7 +5,8 @@ using UnityEngine;
 public class Life : MonoBehaviour
 {
 	//Keep track of total picked lives (Since the value is static, it can be accessed at "SC_2Dlife.totalLives" from any script)
-	public static int totalLives = 100;
+	public static int maxLives = 25;
+	public static int totalLives = 25;
 
 	void Awake()
 	{

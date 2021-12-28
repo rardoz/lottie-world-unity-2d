@@ -20,6 +20,10 @@ public class Polaroid : Score
 		{
 			Destroy(gameObject);
 		}
+		else if (c2d.gameObject.tag == "Player")
+		{
+			ShadyAssistant.polaroids.Remove(gameObject);
+		}
 		return true;
 	}
 }

@@ -38,7 +38,6 @@ public class Score : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D c2d)
 	{
-		Debug.Log("Polaroid!" + c2d.gameObject.tag);
 		if (itemEnabled && scoreCounter && ShouldTriggerEnter2D(c2d))
 		{
 			if (c2d.CompareTag("Player"))

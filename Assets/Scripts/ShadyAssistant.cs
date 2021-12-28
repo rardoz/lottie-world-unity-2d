@@ -22,7 +22,7 @@ public class ShadyAssistant : Death
 	// Start is called before the first frame update
 	public bool shouldEnterFromLeft = true;
 
-	public ArrayList polaroids = new ArrayList();
+	public static ArrayList polaroids = new ArrayList();
 
 	public static int cameraOffset = 10;
 	Animation anim;

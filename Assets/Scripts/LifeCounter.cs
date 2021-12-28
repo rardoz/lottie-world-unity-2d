@@ -23,7 +23,7 @@ public class LifeCounter : MonoBehaviour
 			counterText.text = "x" + lifeText;
 			if (counterText.text == "x0")
 			{
-				Life.totalLives = 100;
+				Life.totalLives = Life.maxLives;
 				SceneManager.LoadScene("game-over"); //Load scene called Game
 			}
 		}
