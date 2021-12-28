@@ -6,33 +6,36 @@ using UnityEngine.SceneManagement;
 
 public class ItemCounter : MonoBehaviour
 {
-    Text counterText;
+	Text counterText;
 	public int minItems = 20;
 	public int items = 0;
 	private int lastItemCount = 0;
 	public bool altText;
 
-    void Start()
-    {
-        counterText = GetComponent<Text>();
-    }
+	void Start()
+	{
+		counterText = GetComponent<Text>();
+	}
 
-    void Update()
-    {
+	void Update()
+	{
 		int newMin = minItems - items;
-		if(lastItemCount != newMin) {
+		if (lastItemCount != newMin)
+		{
 			counterText.text = altText ? $"{items}" : $"{items} / {minItems}";
 
-			if(lastItemCount >= newMin) {
+			if (lastItemCount >= newMin)
+			{
 				onItemsComplete();
 			}
 
 			// must be last
 			lastItemCount = newMin;
 		}
-    }
+	}
 
-	protected void onItemsComplete(){
-		Debug.Log($"Completed {minItems}");
+	protected void onItemsComplete()
+	{
+
 	}
 }

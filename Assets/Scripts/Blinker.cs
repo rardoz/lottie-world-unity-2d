@@ -23,7 +23,6 @@ public class Blinker : MonoBehaviour
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		Debug.Log("Why you no work?" + previousLives + " " + Life.totalLives);
 		if (previousLives > Life.totalLives && shouldWatchForLives)   //change according to your game
 		{
 			startBlinking = true;

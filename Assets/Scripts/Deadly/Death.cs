@@ -9,7 +9,7 @@ public class Death : Life
 	public bool shouldDestroy = true;
 	public virtual void onDeadlyTriggered(Collider2D c2d)
 	{
-		Debug.Log("OnDeadlyTriggered");
+
 	}
 
 	void Awake()
@@ -36,8 +36,6 @@ public class Death : Life
 			}
 			//Add life to counter
 			totalLives--;
-			//Test: Print total number of lives
-			Debug.Log("You currently have " + Death.totalLives + " lives.");
 			onDeadlyTriggered(c2d);
 		}
 	}
