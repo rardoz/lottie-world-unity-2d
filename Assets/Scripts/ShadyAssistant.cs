@@ -83,6 +83,7 @@ public class ShadyAssistant : Death
 			if (isPhoto)
 			{
 				polaroids.Remove(c2d.gameObject);
+				totalLives--;
 			}
 			else
 			{
