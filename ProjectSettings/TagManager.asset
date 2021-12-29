@@ -57,6 +57,9 @@ TagManager:
   - name: Awards
     uniqueID: 4120486425
     locked: 0
+  - name: Deadly
+    uniqueID: 4175114469
+    locked: 0
   - name: Lights
     uniqueID: 2395543271
     locked: 0
