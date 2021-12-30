@@ -18,7 +18,7 @@ public class NextLevel : MonoBehaviour
 	{
 		if (c2d.CompareTag("Player"))
 		{
-			SceneManager.LoadScene(nextSceneName);
+			//SceneManager.LoadScene(nextSceneName);
 		}
 	}
 }
