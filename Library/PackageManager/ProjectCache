@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637763264180000000
+      ticks: 637764308140000000
     m_Hash: 3050125433
   m_LockFileStatus:
     m_FilePath: /Users/rardoz/Projects/lottie-world/New Unity Project/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637763264180000000
+      ticks: 637764308140000000
     m_Hash: 796862209
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
