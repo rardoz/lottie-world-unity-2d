@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 /*
  Next Level will:
- • Accept a message
- • Will display message in a message bubble
- • Once confirmed / user gets through the messages we can move on to the next level
+ • Go to the chat scene
+ • At the end of the chat will go to the next level
+ • can use next level for this in both cases
 */
 public class NextLevel : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class NextLevel : MonoBehaviour
 	{
 		if (c2d.CompareTag("Player"))
 		{
-			//SceneManager.LoadScene(nextSceneName);
+			SceneManager.LoadScene(nextSceneName);
 		}
 	}
 }

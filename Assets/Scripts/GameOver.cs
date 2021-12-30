@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
 	{
 		if (Input.GetButton("Jump"))
 		{
-			SceneManager.LoadScene("C1S1");
+			SceneManager.LoadScene("C1S1Intro");
 		}
 	}
 }
