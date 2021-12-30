@@ -9,12 +9,13 @@ public class LevelStart : MonoBehaviour
 
 	public string identifier = "";
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetButton("Jump")) {
+	// Update is called once per frame
+	void Update()
+	{
+		if (Input.GetButton("Jump"))
+		{
 			string subLabel = identifier.Length > 0 ? $" {identifier}" : "";
-			SceneManager.LoadScene($"Chapter {chapter} Scene {scene}{subLabel}");
+			SceneManager.LoadScene($"C{chapter}S{scene}{subLabel}");
 		}
-    }
+	}
 }
