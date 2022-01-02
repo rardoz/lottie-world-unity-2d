@@ -11,10 +11,11 @@ public class Story : MonoBehaviour
 	protected bool shouldPause = false;
 	public Text bubbleText;
 
+	public GameObject TakeoverCanvas;
+
 	public float readingTimer = 0.0f;
 	public float readingMiniDuration = 0.1f;
-	public float readingTotalTimer = 0.0f;
-	public float readingTotalDuration = 1.0f;
+
 	public bool startReading = false;
 
 	public int characterIndex = 0;

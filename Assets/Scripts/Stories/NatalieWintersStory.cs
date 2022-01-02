@@ -21,6 +21,8 @@ public class NatalieWintersStory : Story
 
 	protected override void OnFinishedStoryLines()
 	{
-		gameObject.GetComponent<LevelStart>().enabled = true;
+
+		TakeoverCanvas.SetActive(true);
+		TakeoverCanvas.gameObject.GetComponent<LevelStart>().enabled = true;
 	}
 }
