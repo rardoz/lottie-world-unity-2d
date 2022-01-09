@@ -11,8 +11,10 @@ public class RobotController : MonoBehaviour
 	public Vector2 jumpHeight;
 	int JumpCount = 0;
 	public int MaxJumps = 1; //Maximum amount of jumps (i.e. 2 for double jumps)
+	private Animator animate;
 	void Start()
 	{
+		animate = gameObject.GetComponent<Animator>();
 		gameObject.GetComponent<Rigidbody2D>().freezeRotation = true;
 	}
 
@@ -39,7 +41,7 @@ public class RobotController : MonoBehaviour
 			if (moveX != 0)
 			{
 				PlayerMove();
-				Jump();
+
 				//if we are moving left but not facing left flip, and vice versa
 				if (moveX > 0 && !facingLeft)
 				{
@@ -49,12 +51,16 @@ public class RobotController : MonoBehaviour
 				{
 					Flip();
 				}
+			} else {
+				animate.SetFloat("Speed", 0);
 			}
 		}
+		Jump();
 	}
 
 	void PlayerMove()
 	{
+		animate.SetFloat("Speed", 1);
 		//Physics
 		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * Playerspeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 	}
@@ -66,6 +72,7 @@ public class RobotController : MonoBehaviour
 
 		if (jumpKey && JumpCount > 0)
 		{
+			animate.SetBool("Jump", true);
 			gameObject.GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
 			JumpCount -= 1;
 		}
@@ -84,6 +91,7 @@ public class RobotController : MonoBehaviour
 		if (Col.gameObject.tag == "Ground")
 		{
 			JumpCount = MaxJumps;
+			animate.SetBool("Jump", false);
 		}
 	}
 
