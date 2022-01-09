@@ -29,7 +29,7 @@ public class Photographer : MonoBehaviour
 	public float speed = 0;
 	public Vector2 followOffset;
 	private Rigidbody2D rb;
-
+	private Animator animate;
 	public Flash FlashSprite;
 
 	private bool flashEnabled;
@@ -38,6 +38,7 @@ public class Photographer : MonoBehaviour
 	private float originalScale = 1.0f;
 	private void Start()
 	{
+		animate = gameObject.GetComponent<Animator>();
 		cameraTransform = Camera.main.transform;
 		lastCameraPosition = cameraTransform.position;
 		originalScale = transform.localScale.x;
@@ -53,6 +54,11 @@ public class Photographer : MonoBehaviour
 	{
 		PivotSprite();
 		Walk();
+		if(Input.GetAxis("Horizontal") != 0) {
+			animate.SetFloat("Speed", 1);
+		} else {
+			animate.SetFloat("Speed", 0);
+		}
 		TakePhoto();
 	}
 

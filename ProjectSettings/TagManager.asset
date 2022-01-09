@@ -58,6 +58,9 @@ TagManager:
   - name: Awards
     uniqueID: 4120486425
     locked: 0
+  - name: Extras
+    uniqueID: 2610041653
+    locked: 0
   - name: Deadly
     uniqueID: 4175114469
     locked: 0
