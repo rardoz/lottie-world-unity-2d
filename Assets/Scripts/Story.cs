@@ -5,96 +5,96 @@ using UnityEngine.UI;
 
 public class Story : MonoBehaviour
 {
-	protected string[] storyLines;
-	protected int storyLineIndex = 0;
+    protected string[] storyLines;
+    protected int storyLineIndex = 0;
 
-	protected bool shouldPause = false;
-	public Text bubbleText;
+    protected bool shouldPause = false;
+    public Text bubbleText;
 
-	public GameObject TakeoverCanvas;
+    public GameObject TakeoverCanvas;
 
-	public float readingTimer = 0.0f;
-	public float readingMiniDuration = 0.1f;
+    public float readingTimer = 0.0f;
+    public float readingMiniDuration = 0.1f;
 
-	public bool startReading = false;
+    public bool startReading = false;
 
-	public int characterIndex = 0;
+    public int characterIndex = 0;
 
-	protected bool isDone = false;
+    protected bool isDone = false;
 
-	protected string GetStoryLine()
-	{
-		return storyLines[storyLineIndex];
-	}
+    protected string GetStoryLine()
+    {
+        return storyLines[storyLineIndex];
+    }
 
-	protected virtual void OnFinishedStoryLines()
-	{
-	}
+    protected virtual void OnFinishedStoryLines()
+    {
+    }
 
-	protected void OnFinishStoryLine()
-	{
-		shouldPause = true;
-	}
+    protected void OnFinishStoryLine()
+    {
+        shouldPause = true;
+    }
 
-	void RenderStoryLine()
-	{
+    void RenderStoryLine()
+    {
 
-		if (startReading)
-		{
-			string storyLine = GetStoryLine();
-			char[] characters = storyLine.ToCharArray();
+        if (startReading)
+        {
+            string storyLine = GetStoryLine();
+            char[] characters = storyLine.ToCharArray();
 
-			char letter = characters[characterIndex];
-			bubbleText.text += letter.ToString();
+            char letter = characters[characterIndex];
+            bubbleText.text += letter.ToString();
 
-			if (characterIndex == characters.Length - 1)
-			{
+            if (characterIndex == characters.Length - 1)
+            {
 
-				characterIndex = 0;
-				storyLineIndex++;
-				OnFinishStoryLine();
-				if (storyLineIndex == storyLines.Length)
-				{
-					startReading = false;
-					storyLineIndex = 0;
-					isDone = true;
-				}
-			}
-			else
-			{
-				characterIndex++;
-			}
-		}
-	}
+                characterIndex = 0;
+                storyLineIndex++;
+                OnFinishStoryLine();
+                if (storyLineIndex == storyLines.Length)
+                {
+                    startReading = false;
+                    storyLineIndex = 0;
+                    isDone = true;
+                }
+            }
+            else
+            {
+                characterIndex++;
+            }
+        }
+    }
 
-	void ContinueToNextStoryLine()
-	{
-		bubbleText.text = "";
-		shouldPause = false;
-	}
+    void ContinueToNextStoryLine()
+    {
+        bubbleText.text = "";
+        shouldPause = false;
+    }
 
 
-	void Update()
-	{
-		if (shouldPause)
-		{
-			if (Input.GetButtonDown("Jump") && !isDone)
-			{
-				ContinueToNextStoryLine();
-			}
-			else if (Input.GetButtonUp("Jump") && isDone)
-			{
-				OnFinishedStoryLines();
-			}
-			return;
-		}
+    void Update()
+    {
+        if (shouldPause)
+        {
+            if (Input.GetButtonDown("Jump") && !isDone)
+            {
+                ContinueToNextStoryLine();
+            }
+            else if (Input.GetButtonDown("Jump") && isDone)
+            {
+                OnFinishedStoryLines();
+            }
+            return;
+        }
 
-		//this is the letter delay
-		readingTimer += Time.deltaTime;
-		if (readingTimer >= (Input.GetButton("Jump") ? readingMiniDuration / 2.0f : readingMiniDuration))
-		{
-			readingTimer = 0.0f;
-			RenderStoryLine();
-		}
-	}
+        //this is the letter delay
+        readingTimer += Time.deltaTime;
+        if (readingTimer >= readingMiniDuration / 4.0f || Input.GetButtonUp("Jump"))
+        {
+            readingTimer = 0.0f;
+            RenderStoryLine();
+        }
+    }
 }
