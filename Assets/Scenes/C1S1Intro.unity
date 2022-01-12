@@ -673,17 +673,17 @@ PrefabInstance:
     - target: {fileID: 9191348843379783272, guid: cd1b9c9c8a32a413aa1a8008060b8fd9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9191348843379783272, guid: cd1b9c9c8a32a413aa1a8008060b8fd9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9191348843379783272, guid: cd1b9c9c8a32a413aa1a8008060b8fd9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9191348843379783272, guid: cd1b9c9c8a32a413aa1a8008060b8fd9,
         type: 3}
@@ -699,6 +699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191348843379783273, guid: cd1b9c9c8a32a413aa1a8008060b8fd9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9191348843379783274, guid: cd1b9c9c8a32a413aa1a8008060b8fd9,
         type: 3}
@@ -1338,6 +1343,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 749974346}
     m_Modifications:
+    - target: {fileID: 2678775331829089744, guid: e7844befb9b714ef2902757281851dc6,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2678775331829089746, guid: e7844befb9b714ef2902757281851dc6,
         type: 3}
       propertyPath: m_Name
@@ -1467,6 +1477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488262321577054341, guid: 42aceba72ea624aa183f417018a61a33,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6488262321577054394, guid: 42aceba72ea624aa183f417018a61a33,
         type: 3}
