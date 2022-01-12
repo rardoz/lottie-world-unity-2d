@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.4, y: -178.1}
-  m_SizeDelta: {x: 1915.82, y: 107.61}
+  m_AnchoredPosition: {x: -0.6599395, y: -119.00014}
+  m_SizeDelta: {x: 1037.39, y: 58.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9133661786054112604
 CanvasRenderer:
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.88
-  m_Text: Salad modeling [for money]
+  m_Text: intro to salad modeling
 --- !u!1 &9133661787470508231
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,8 +104,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9133661787470508231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7172546, y: 12.104507, z: -13315.5}
-  m_LocalScale: {x: 2337.4336, y: 1396.56, z: 134.5}
+  m_LocalPosition: {x: 0.15, y: 3.22, z: 1}
+  m_LocalScale: {x: 1041.3544, y: 564.5814, z: 1052.8206}
   m_Children: []
   m_Father: {fileID: 9133661787578523126}
   m_RootOrder: 0
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1597222585
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
     type: 3}
@@ -191,7 +191,7 @@ RectTransform:
   m_GameObject: {fileID: 9133661787578523122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01793722, y: 0.01793722, z: 0.01793722}
   m_Children:
   - {fileID: 9133661787470508230}
   - {fileID: 9133661787830074336}
@@ -213,7 +213,7 @@ Canvas:
   m_GameObject: {fileID: 9133661787578523122}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &9133661787578523121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chapter: 1
-  scene: 2
+  scene: 1
   identifier: 
 --- !u!1 &9133661787830074337
 GameObject:
@@ -314,8 +314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0008235644, y: 134}
-  m_SizeDelta: {x: 1805.78, y: 605.19}
+  m_AnchoredPosition: {x: -9, y: 50}
+  m_SizeDelta: {x: 977.8, y: 327.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9133661787830074342
 CanvasRenderer:
@@ -360,4 +360,4 @@ MonoBehaviour:
     m_LineSpacing: 0.72
   m_Text: 'Chapter 1
 
-    Scene 2'
+    Scene 1'
