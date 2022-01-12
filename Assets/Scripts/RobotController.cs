@@ -16,6 +16,7 @@ public class RobotController : MonoBehaviour
     private Animator animate;
 
     public ScoreCounter scoreCounter;
+
     void Start()
     {
         animate = gameObject.GetComponent<Animator>();
@@ -59,8 +60,7 @@ public class RobotController : MonoBehaviour
     void Jump()
     {
         bool jumpKey = Input.GetButton("Jump"); // or GetButtonDown
-
-        if (jumpKey && JumpCount > 0)
+        if (jumpKey && JumpCount > 0 && gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
             animate.SetBool("Jump", true);
             gameObject.GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
@@ -84,7 +84,6 @@ public class RobotController : MonoBehaviour
             animate.SetBool("Jump", false);
         }
     }
-
 }
 
 
