@@ -220,10 +220,25 @@ PrefabInstance:
       propertyPath: whenFacingLeft
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066921, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.834077
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066921, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.971148
+      objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
       propertyPath: m_Name
       value: Take Picture Trigger (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
@@ -963,6 +978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Take Picture Trigger (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1162,6 +1182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Take Picture Trigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1360,19 +1385,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1807239329}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &450870609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7662626035287648852, guid: d9b5bf9c14c704782a5e0fd8d406abdd,
-    type: 3}
-  m_PrefabInstance: {fileID: 533131869}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &450870610 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7662626035287648850, guid: d9b5bf9c14c704782a5e0fd8d406abdd,
     type: 3}
   m_PrefabInstance: {fileID: 533131869}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450870609}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01c0fa949292e4c4dbf84dc85bd72915, type: 3}
@@ -1384,7 +1403,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 533131869}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450870609}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bb82c2448fee42798a37182191efa7f, type: 3}
@@ -1521,6 +1540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Take Picture Trigger (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
@@ -2093,6 +2117,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.99263006
       objectReference: {fileID: 0}
+    - target: {fileID: 7662626035287648849, guid: d9b5bf9c14c704782a5e0fd8d406abdd,
+        type: 3}
+      propertyPath: scoreCounter
+      value: 
+      objectReference: {fileID: 576804818}
     - target: {fileID: 7662626035287648852, guid: d9b5bf9c14c704782a5e0fd8d406abdd,
         type: 3}
       propertyPath: m_Name
@@ -2367,6 +2396,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Take Picture Trigger (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
       propertyPath: m_RootOrder
@@ -2557,6 +2591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f9b65a19fc342ad832ad31de91c05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
 --- !u!212 &601759824
@@ -2717,6 +2752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Take Picture Trigger (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
@@ -3145,6 +3185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447775262764665915, guid: 09ab07efda0504935adbe02c7231b9b4,
+        type: 3}
+      propertyPath: incriment
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ab07efda0504935adbe02c7231b9b4, type: 3}
@@ -3917,6 +3962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f9b65a19fc342ad832ad31de91c05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
 --- !u!212 &1379251463
@@ -4041,6 +4087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f9b65a19fc342ad832ad31de91c05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
 --- !u!212 &1383601855
@@ -4115,6 +4162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Take Picture Trigger (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
@@ -4454,7 +4506,7 @@ PrefabInstance:
         type: 3}
       propertyPath: followObject
       value: 
-      objectReference: {fileID: 450870609}
+      objectReference: {fileID: 450870612}
     - target: {fileID: 9083830476558416520, guid: 7578a7035083c46c3902a0723da064b2,
         type: 3}
       propertyPath: yAxisEnabled
@@ -4569,6 +4621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Take Picture Trigger (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
@@ -4729,6 +4786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f9b65a19fc342ad832ad31de91c05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
 --- !u!212 &1634850919
@@ -4849,6 +4907,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health
       objectReference: {fileID: 0}
+    - target: {fileID: 5447775262764665915, guid: 09ab07efda0504935adbe02c7231b9b4,
+        type: 3}
+      propertyPath: incriment
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ab07efda0504935adbe02c7231b9b4, type: 3}
 --- !u!1001 &1665559297
@@ -4872,6 +4935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Take Picture Trigger (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
@@ -5608,6 +5676,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5447775262764665915, guid: 09ab07efda0504935adbe02c7231b9b4,
+        type: 3}
+      propertyPath: incriment
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ab07efda0504935adbe02c7231b9b4, type: 3}
 --- !u!4 &1857157986 stripped
@@ -5985,6 +6058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f9b65a19fc342ad832ad31de91c05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
 --- !u!212 &2108336277
@@ -6895,6 +6969,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Take Picture Trigger
       objectReference: {fileID: 0}
+    - target: {fileID: 3006658706532066922, guid: 823278527f24a4c9a99de16dff4d090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
       propertyPath: m_RootOrder
@@ -7483,6 +7562,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health
       objectReference: {fileID: 0}
+    - target: {fileID: 5447775262764665915, guid: 09ab07efda0504935adbe02c7231b9b4,
+        type: 3}
+      propertyPath: incriment
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ab07efda0504935adbe02c7231b9b4, type: 3}
 --- !u!1001 &5612765678096633342
@@ -7615,6 +7699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cactus-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644177164464402169, guid: bf13c7c2e6c414947b1d5ffae9f02119,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5644177164464402173, guid: bf13c7c2e6c414947b1d5ffae9f02119,
         type: 3}

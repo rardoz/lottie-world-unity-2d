@@ -19,76 +19,68 @@ using UnityEngine;
 
 public class ShadyAssistant : Death
 {
-	// Start is called before the first frame update
-	public bool shouldEnterFromLeft = true;
+    // Start is called before the first frame update
+    public bool shouldEnterFromLeft = true;
 
-	public static ArrayList polaroids = new ArrayList();
+    public static ArrayList polaroids = new ArrayList();
 
-	public static int cameraOffset = 10;
-	Animation anim;
+    public static int cameraOffset = 10;
+    Animation anim;
 
-	Blinker blinker;
+    void Start()
+    {
+        anim = gameObject.GetComponent<Animation>();
+        blinker = gameObject.GetComponent<Blinker>();
+    }
 
-	void Start()
-	{
-		anim = gameObject.GetComponent<Animation>();
-		blinker = gameObject.GetComponent<Blinker>();
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        EnterOrLeaveScene();
+    }
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 
-	// Update is called once per frame
-	void Update()
-	{
-		EnterOrLeaveScene();
-	}
-	void Flip()
-	{
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
-	}
+    void EnterOrLeaveScene()
+    {
+        Vector2 prevPos = transform.position;
+        if (!blinker.startBlinking && polaroids.Count > 0)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), .03f);
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector2(player.transform.position.x - cameraOffset, transform.position.y), .03f);
+        }
 
-	void EnterOrLeaveScene()
-	{
-		Vector2 prevPos = transform.position;
-		if (!blinker.startBlinking && polaroids.Count > 0)
-		{
-			transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), .03f);
-		}
-		else
-		{
-			transform.position = Vector3.MoveTowards(transform.position, new Vector2(player.transform.position.x - cameraOffset, transform.position.y), .03f);
-		}
+        if (transform.position.x - prevPos.x > 0)
+        {
+            if (transform.localScale.x < 0)
+            {
+                Flip();
+            }
+        }
+        else
+        {
+            if (transform.localScale.x > 0)
+            {
+                Flip();
+            }
+        }
+    }
 
-		if (transform.position.x - prevPos.x > 0)
-		{
-			if (transform.localScale.x < 0)
-			{
-				Flip();
-			}
-		}
-		else
-		{
-			if (transform.localScale.x > 0)
-			{
-				Flip();
-			}
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D c2d)
-	{
-		if (!blinker.startBlinking)
-		{
-			bool isPhoto = c2d.CompareTag("Polaroid");
-			if (isPhoto)
-			{
-				polaroids.Remove(c2d.gameObject);
-				totalLives--;
-			}
-			else
-			{
-				OnTriggerEntered(c2d);
-			}
-		}
-	}
+    void OnTriggerEnter2D(Collider2D c2d)
+    {
+        bool isPhoto = c2d.CompareTag("Polaroid");
+        if (isPhoto)
+        {
+            polaroids.Remove(c2d.gameObject);
+            totalLives--;
+            Destroy(c2d.gameObject.GetComponentInParent<TakePicture>().gameObject);
+        }
+    }
 }

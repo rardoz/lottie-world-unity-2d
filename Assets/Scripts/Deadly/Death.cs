@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Death : Life
 {
-    public RobotController player;
     public bool shouldDestroy = true;
-
 
     protected Blinker blinker;
 
@@ -19,7 +17,11 @@ public class Death : Life
     void Awake()
     {
         // do nothing override to prevent bug
-        blinker = player.gameObject.GetComponent<Blinker>();
+        if (Camera.main.GetComponent<CameraFollow>())
+        {
+            player = player ?? Camera.main.GetComponent<CameraFollow>().followObject;
+            blinker = player.gameObject.GetComponent<Blinker>();
+        }
     }
     public void reloadScene()
     {

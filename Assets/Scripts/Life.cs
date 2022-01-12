@@ -8,10 +8,16 @@ public class Life : MonoBehaviour
     public static int maxLives = 10;
     public static int totalLives = 10;
 
+    public static int pointValue = 100000;
+
+    public int incriment = 1;
+
+    public RobotController player;
     void Awake()
     {
         //Make Collider2D as trigger
         GetComponent<Collider2D>().isTrigger = true;
+        player = player ?? Camera.main.GetComponent<CameraFollow>().followObject;
     }
 
     void OnTriggerEnter2D(Collider2D c2d)
@@ -20,8 +26,18 @@ public class Life : MonoBehaviour
         if (c2d.CompareTag("Player"))
         {
             //Add life to counter
-            totalLives++;
-            //Destroy life
+            totalLives += incriment;
+            if (totalLives > maxLives)
+            {
+                if (player.scoreCounter && (totalLives - incriment >= maxLives))
+                {
+                    player.scoreCounter.totalScore += pointValue;
+                }
+                else
+                {
+                    totalLives = maxLives;
+                }
+            }
             Destroy(gameObject);
         }
     }
