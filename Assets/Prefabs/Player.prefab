@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.41541767, y: -8.901789}
+  m_Offset: {x: -1.125967, y: -9.762058}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.2073765, y: 1.8308325}
+  m_Size: {x: 11.005512, y: 0.43039417}
   m_EdgeRadius: 0
 --- !u!1 &97532414458215757
 GameObject:
@@ -149,7 +149,7 @@ Transform:
   m_Children:
   - {fileID: 1453314038520694207}
   m_Father: {fileID: 7662626035287648854}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2843865512192202148
 MonoBehaviour:
@@ -215,7 +215,7 @@ Transform:
   - {fileID: 7388147990949204571}
   - {fileID: 4508217779187728402}
   m_Father: {fileID: 7662626035287648854}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078266424252243714
 GameObject:
@@ -399,63 +399,6 @@ Transform:
   m_Father: {fileID: 4508217779187728402}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.822}
---- !u!1 &2272339128642511847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9061444794442531404}
-  - component: {fileID: 3755092142267314967}
-  m_Layer: 0
-  m_Name: SquishTrigger
-  m_TagString: Squish
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9061444794442531404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2272339128642511847}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7662626035287648854}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &3755092142267314967
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2272339128642511847}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.41541767, y: -8.901789}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 11.2073765, y: 1.8308325}
-  m_EdgeRadius: 0
 --- !u!1 &2309274084709254546
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +459,7 @@ Transform:
   m_Children:
   - {fileID: 2849142929682349213}
   m_Father: {fileID: 7662626035287648854}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &199940188856394970
 MonoBehaviour:
@@ -610,7 +553,7 @@ Transform:
   m_Children:
   - {fileID: 8920395793328446738}
   m_Father: {fileID: 7662626035287648854}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2839378526721430782
 MonoBehaviour:
@@ -796,7 +739,7 @@ Transform:
   m_Children:
   - {fileID: 4180701629571399169}
   m_Father: {fileID: 7662626035287648854}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4219601948235463505
 MonoBehaviour:
@@ -929,7 +872,6 @@ Transform:
   m_Children:
   - {fileID: 1220888412}
   - {fileID: 2107960439}
-  - {fileID: 9061444794442531404}
   - {fileID: 6461499836151425877}
   - {fileID: 5764709803102135136}
   - {fileID: 5742269791454827581}
@@ -1002,7 +944,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09327698, y: -0.08464241}
+  m_Offset: {x: -1.3595467, y: -0.17914009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1013,7 +955,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.753542, y: 19.645538}
+  m_Size: {x: 11.959761, y: 19.456543}
   m_EdgeRadius: 0
 --- !u!114 &7662626035287648849
 MonoBehaviour:

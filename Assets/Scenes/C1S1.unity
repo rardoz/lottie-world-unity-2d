@@ -2559,7 +2559,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 450870612}
   shouldDestroy: 0
-  blinker: {fileID: 450870610}
 --- !u!212 &601759824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3920,7 +3919,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 450870612}
   shouldDestroy: 0
-  blinker: {fileID: 450870610}
 --- !u!212 &1379251463
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4045,7 +4043,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 450870612}
   shouldDestroy: 0
-  blinker: {fileID: 450870610}
 --- !u!212 &1383601855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4734,7 +4731,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 450870612}
   shouldDestroy: 0
-  blinker: {fileID: 450870610}
 --- !u!212 &1634850919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5991,7 +5987,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 450870612}
   shouldDestroy: 0
-  blinker: {fileID: 450870610}
 --- !u!212 &2108336277
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6450,6 +6445,11 @@ PrefabInstance:
       propertyPath: blinker
       value: 
       objectReference: {fileID: 450870610}
+    - target: {fileID: 1553359577145905087, guid: bd1c0d4677c1442249f5735133746654,
+        type: 3}
+      propertyPath: shouldDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1553359577145905090, guid: bd1c0d4677c1442249f5735133746654,
         type: 3}
       propertyPath: m_RootOrder

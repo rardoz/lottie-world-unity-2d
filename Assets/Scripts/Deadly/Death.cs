@@ -5,43 +5,49 @@ using UnityEngine.SceneManagement;
 
 public class Death : Life
 {
-	public RobotController player;
-	public bool shouldDestroy = true;
-	public virtual void onDeadlyTriggered(Collider2D c2d)
-	{
+    public RobotController player;
+    public bool shouldDestroy = true;
 
-	}
 
-	void Awake()
-	{
-		// do nothing override to prevent bug
-	}
-	public void reloadScene()
-	{
-		Scene scene = SceneManager.GetActiveScene();
-		SceneManager.LoadScene(scene.name);
-	}
+    protected Blinker blinker;
 
-	protected void OnTriggerEntered(Collider2D c2d)
-	{
-		bool isPlayer = c2d.CompareTag("Player");
+    public virtual void onDeadlyTriggered(Collider2D c2d)
+    {
 
-		//Destroy the life if Object tagged Player comes in contact with it
-		if (isPlayer)
-		{
-			//Destroy life
-			if (shouldDestroy)
-			{
-				Destroy(gameObject);
-			}
-			//Add life to counter
-			totalLives--;
-			onDeadlyTriggered(c2d);
-		}
-	}
+    }
 
-	void OnTriggerEnter2D(Collider2D c2d)
-	{
-		OnTriggerEntered(c2d);
-	}
+    void Awake()
+    {
+        // do nothing override to prevent bug
+        blinker = player.gameObject.GetComponent<Blinker>();
+    }
+    public void reloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
+
+    protected void OnTriggerEntered(Collider2D c2d)
+    {
+        bool isPlayer = c2d.CompareTag("Player");
+
+        //Destroy the life if Object tagged Player comes in contact with it
+        if (isPlayer && !blinker.startBlinking)
+        {
+            blinker.startBlinking = true;
+            //Destroy life
+            if (shouldDestroy)
+            {
+                Destroy(gameObject);
+            }
+            //Add life to counter
+            totalLives--;
+            onDeadlyTriggered(c2d);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D c2d)
+    {
+        OnTriggerEntered(c2d);
+    }
 }
