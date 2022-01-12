@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// TODO IN THE MORNING WE NEED OT FIGURE OUT HOW TO ALLOW THE USER TO JUMP THROUGH THE GROUND
 public class RobotController : MonoBehaviour
 {
     public bool facingLeft = true;
@@ -20,45 +22,29 @@ public class RobotController : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().freezeRotation = true;
     }
 
-    // Update is called once per frame
-
-    void MoveToPositionOverride()
-    {
-        Vector3 newPos = transform.position;
-        newPos.x = 200;
-        transform.position = newPos;
-        Camera.main.GetComponent<CameraFollow>().speed = 1000;
-    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backslash))
+        moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
+
+        if (moveX != 0)
         {
-            MoveToPositionOverride();
-            return;
+            PlayerMove();
+
+            //if we are moving left but not facing left flip, and vice versa
+            if (moveX > 0 && !facingLeft)
+            {
+                Flip();
+            }
+            else if (moveX < 0 && facingLeft)
+            {
+                Flip();
+            }
         }
         else
         {
-            moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
-
-            if (moveX != 0)
-            {
-                PlayerMove();
-
-                //if we are moving left but not facing left flip, and vice versa
-                if (moveX > 0 && !facingLeft)
-                {
-                    Flip();
-                }
-                else if (moveX < 0 && facingLeft)
-                {
-                    Flip();
-                }
-            }
-            else
-            {
-                animate.SetFloat("Speed", 0);
-            }
+            animate.SetFloat("Speed", 0);
         }
+
         Jump();
     }
 
