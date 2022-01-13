@@ -14,7 +14,7 @@ public class RobotController : MonoBehaviour
     private Animator animate;
 
     public ScoreCounter scoreCounter;
-
+    private bool isCoroutineExecuting = false;
 
     void Start()
     {
@@ -44,6 +44,8 @@ public class RobotController : MonoBehaviour
             animate.SetFloat("Speed", 0);
         }
 
+
+
         Jump();
     }
 
@@ -52,6 +54,12 @@ public class RobotController : MonoBehaviour
         animate.SetFloat("Speed", 1);
         //Physics
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * Playerspeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+    }
+
+    public void ShootAnimation()
+    {
+        animate.SetFloat("Fire", 1);
+        StartCoroutine(ExecuteAfterTime(0.30f));
     }
 
     //Jumping Code
@@ -64,6 +72,21 @@ public class RobotController : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
             JumpCount -= 1;
         }
+    }
+
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        if (isCoroutineExecuting)
+            yield break;
+
+        isCoroutineExecuting = true;
+
+        yield return new WaitForSeconds(time);
+
+        // Code to execute after the delay
+        animate.SetFloat("Fire", 0);
+        isCoroutineExecuting = false;
     }
 
     void Flip()

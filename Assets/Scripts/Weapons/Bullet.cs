@@ -12,10 +12,16 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c2d)
     {
-        if (c2d.CompareTag("Enemy"))
+        bool isEnemy = c2d.CompareTag("Enemy");
+        bool isAssistant = c2d.CompareTag("ShadyCameraAssistant");
+        if (isEnemy)
         {
             Destroy(gameObject, 0.1f);
-			Destroy(c2d.gameObject);
+            Destroy(c2d.gameObject);
+        }
+        else if (isAssistant)
+        {
+            c2d.gameObject.GetComponent<ShadyAssistant>().blinker.startBlinking = true;
         }
     }
 }

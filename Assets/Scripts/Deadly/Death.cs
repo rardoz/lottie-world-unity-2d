@@ -7,7 +7,7 @@ public class Death : Life
 {
     public bool shouldDestroy = true;
 
-    protected Blinker blinker;
+    public Blinker blinker;
 
     public virtual void onDeadlyTriggered(Collider2D c2d)
     {
