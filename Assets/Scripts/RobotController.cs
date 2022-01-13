@@ -15,6 +15,7 @@ public class RobotController : MonoBehaviour
 
     public ScoreCounter scoreCounter;
 
+
     void Start()
     {
         animate = gameObject.GetComponent<Animator>();
@@ -24,7 +25,6 @@ public class RobotController : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
-
         if (moveX != 0)
         {
             PlayerMove();
@@ -76,7 +76,10 @@ public class RobotController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D Col)
     {
-        if (Col.gameObject.tag == "Ground")
+        bool isGround = Col.gameObject.tag == "Ground";
+        bool isBarrier = Col.gameObject.tag == "Barrier";
+
+        if (isGround || isBarrier)
         {
             JumpCount = MaxJumps;
             animate.SetBool("Jump", false);

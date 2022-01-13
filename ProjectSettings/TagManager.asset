@@ -15,6 +15,7 @@ TagManager:
   - ShadyCameraAssistant
   - Squish
   - StoryTeller
+  - Barrier
   layers:
   - Default
   - TransparentFX
