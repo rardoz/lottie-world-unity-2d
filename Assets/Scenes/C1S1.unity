@@ -2594,6 +2594,7 @@ MonoBehaviour:
   incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
+  blinker: {fileID: 0}
 --- !u!212 &601759824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3965,6 +3966,7 @@ MonoBehaviour:
   incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
+  blinker: {fileID: 0}
 --- !u!212 &1379251463
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4090,6 +4092,7 @@ MonoBehaviour:
   incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
+  blinker: {fileID: 0}
 --- !u!212 &1383601855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4789,6 +4792,7 @@ MonoBehaviour:
   incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
+  blinker: {fileID: 0}
 --- !u!212 &1634850919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6061,6 +6065,7 @@ MonoBehaviour:
   incriment: 1
   player: {fileID: 450870612}
   shouldDestroy: 0
+  blinker: {fileID: 0}
 --- !u!212 &2108336277
 SpriteRenderer:
   m_ObjectHideFlags: 0

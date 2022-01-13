@@ -35,7 +35,7 @@ public class Shoot : MonoBehaviour
         Vector2 pos = Camera.main.ScreenToWorldPoint(gameObject.transform.position);
         direction = pos - (Vector2)gun.position;
 
-        if (Input.GetButtonDown("Fire1") && bulletsRemaining > 0)
+        if (Input.GetButtonDown("Fire1") && bulletsRemaining > 0 && player.animate.GetFloat("Fire") < 0.1)
         {
             if (Time.time > nextShot)
             {

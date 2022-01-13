@@ -11,7 +11,7 @@ public class RobotController : MonoBehaviour
     public Vector2 jumpHeight;
     int JumpCount = 0;
     public int MaxJumps = 1; //Maximum amount of jumps (i.e. 2 for double jumps)
-    private Animator animate;
+    public Animator animate;
 
     public ScoreCounter scoreCounter;
     private bool isCoroutineExecuting = false;
@@ -24,6 +24,7 @@ public class RobotController : MonoBehaviour
 
     void Update()
     {
+
         moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
         if (moveX != 0)
         {
@@ -43,14 +44,12 @@ public class RobotController : MonoBehaviour
         {
             animate.SetFloat("Speed", 0);
         }
-
-
-
         Jump();
     }
 
     void PlayerMove()
     {
+
         animate.SetFloat("Speed", 1);
         //Physics
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * Playerspeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
