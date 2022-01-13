@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519316399467568893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.91, y: -1.45, z: 1}
+  m_LocalPosition: {x: 1.91, y: -1.45, z: 0}
   m_LocalScale: {x: 0.14207527, y: 0.14207527, z: 0.14207527}
   m_Children: []
   m_Father: {fileID: 3214156454369386613}
@@ -232,9 +232,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -824695437
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ea0f0c6aa6e004e388ae4bc8ac44beda, type: 3}
   m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   m_FlipX: 0
@@ -256,7 +256,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1901994380584260980}
   - component: {fileID: 1901994380584260983}
-  - component: {fileID: 1901994380584260981}
   m_Layer: 0
   m_Name: cloud-6
   m_TagString: Untagged
@@ -272,7 +271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901994380584260982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.325, y: -1.376, z: 1}
+  m_LocalPosition: {x: 1.325, y: -1.376, z: 0}
   m_LocalScale: {x: 0.16547611, y: 0.16547611, z: 0.2206348}
   m_Children: []
   m_Father: {fileID: 3214156454369386613}
@@ -329,19 +328,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1901994380584260981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901994380584260982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d7d182aa95b4a7cbf8ef64f5fcbcfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.1, y: 0}
 --- !u!1 &3938762202204955820
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +371,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5903989617660717507}
   - component: {fileID: 5903989617660717506}
-  - component: {fileID: 5903989617660717504}
   m_Layer: 0
   m_Name: cloud-9
   m_TagString: Untagged
@@ -401,7 +386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5903989617660717517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.923, y: -1.089, z: 1}
+  m_LocalPosition: {x: 0.923, y: -1.089, z: 0}
   m_LocalScale: {x: 0.1221075, y: 0.1221075, z: 0.16281}
   m_Children: []
   m_Father: {fileID: 3214156454369386613}
@@ -458,16 +443,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5903989617660717504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903989617660717517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d7d182aa95b4a7cbf8ef64f5fcbcfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.15, y: 0}
