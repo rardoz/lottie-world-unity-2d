@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-// TODO IN THE MORNING WE NEED OT FIGURE OUT HOW TO ALLOW THE USER TO JUMP THROUGH THE GROUND
 public class RobotController : MonoBehaviour
 {
     public bool facingLeft = true;

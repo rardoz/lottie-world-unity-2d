@@ -27,6 +27,8 @@ public class ShadyAssistant : Death
     public static int cameraOffset = 10;
     Animation anim;
 
+    public float speed = 0.03f;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animation>();
@@ -50,11 +52,11 @@ public class ShadyAssistant : Death
         Vector2 prevPos = transform.position;
         if (!blinker.startBlinking && polaroids.Count > 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), .03f);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), speed);
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector2(player.transform.position.x - cameraOffset, transform.position.y), .03f);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector2(player.transform.position.x - cameraOffset, transform.position.y), speed);
         }
 
         if (transform.position.x - prevPos.x > 0)
