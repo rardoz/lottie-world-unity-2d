@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf43fbfc427447f2a6035d40f2d1990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsRemaining: 12
+  secondsRemaining: 120
 --- !u!1001 &5952626974649193699
 PrefabInstance:
   m_ObjectHideFlags: 0
