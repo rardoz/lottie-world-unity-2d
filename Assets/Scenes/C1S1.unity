@@ -275,7 +275,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -824695437
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 584e54205013d4857b4a5915c3fdf812, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1333,12 +1333,12 @@ PrefabInstance:
     - target: {fileID: 1553359577145905085, guid: bd1c0d4677c1442249f5735133746654,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1553359577145905085, guid: bd1c0d4677c1442249f5735133746654,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -119852827
+      value: -473805933
       objectReference: {fileID: 0}
     - target: {fileID: 1553359577145905090, guid: bd1c0d4677c1442249f5735133746654,
         type: 3}
@@ -1353,7 +1353,7 @@ PrefabInstance:
     - target: {fileID: 1553359577145905090, guid: bd1c0d4677c1442249f5735133746654,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.05
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 1553359577145905090, guid: bd1c0d4677c1442249f5735133746654,
         type: 3}
@@ -1510,7 +1510,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -824695437
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f9b457b60725646ea86a6132608f90b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3494,17 +3494,12 @@ PrefabInstance:
     - target: {fileID: 1430638069255610411, guid: 6a8245f7ac9c14f78aac93836cce8f58,
         type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1430638069255610411, guid: 6a8245f7ac9c14f78aac93836cce8f58,
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1430638069255610411, guid: 6a8245f7ac9c14f78aac93836cce8f58,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -473805933
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a8245f7ac9c14f78aac93836cce8f58, type: 3}
@@ -8457,6 +8452,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.31720734
       objectReference: {fileID: 0}
+    - target: {fileID: 5612765678457001382, guid: f7279666107f04fc886906d7a2fb54ea,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612765678457001382, guid: f7279666107f04fc886906d7a2fb54ea,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 552220055
+      objectReference: {fileID: 0}
     - target: {fileID: 5612765678509721198, guid: f7279666107f04fc886906d7a2fb54ea,
         type: 3}
       propertyPath: m_RootOrder
@@ -8526,6 +8531,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Photographer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612765679193871224, guid: f7279666107f04fc886906d7a2fb54ea,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612765679193871224, guid: f7279666107f04fc886906d7a2fb54ea,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 552220055
       objectReference: {fileID: 0}
     - target: {fileID: 7287589312354453913, guid: f7279666107f04fc886906d7a2fb54ea,
         type: 3}
@@ -9122,22 +9137,22 @@ PrefabInstance:
     - target: {fileID: 7919657834196466589, guid: 794be99b2d7f84837b3fc4d414c4f302,
         type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
-    - target: {fileID: 7919657834196466589, guid: 794be99b2d7f84837b3fc4d414c4f302,
+    - target: {fileID: 7919657834246471714, guid: 794be99b2d7f84837b3fc4d414c4f302,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919657834196466589, guid: 794be99b2d7f84837b3fc4d414c4f302,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -473805933
+      propertyPath: m_SortingLayer
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7919657834246471714, guid: 794be99b2d7f84837b3fc4d414c4f302,
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919657834246471714, guid: 794be99b2d7f84837b3fc4d414c4f302,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -473805933
       objectReference: {fileID: 0}
     - target: {fileID: 7919657834246471715, guid: 794be99b2d7f84837b3fc4d414c4f302,
         type: 3}
@@ -9217,7 +9232,7 @@ PrefabInstance:
     - target: {fileID: 7919657834679089719, guid: 794be99b2d7f84837b3fc4d414c4f302,
         type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7919657834679089719, guid: 794be99b2d7f84837b3fc4d414c4f302,
         type: 3}
@@ -9319,15 +9334,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7919657835784569290, guid: 794be99b2d7f84837b3fc4d414c4f302,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -473805933
-      objectReference: {fileID: 0}
     - target: {fileID: 7919657835784569291, guid: 794be99b2d7f84837b3fc4d414c4f302,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 794be99b2d7f84837b3fc4d414c4f302, type: 3}

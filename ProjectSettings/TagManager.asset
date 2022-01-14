@@ -53,8 +53,14 @@ TagManager:
   - name: Background
     uniqueID: 3470271859
     locked: 0
-  - name: Trailers
+  - name: TrailersLower
     uniqueID: 3821161363
+    locked: 0
+  - name: Photographer
+    uniqueID: 552220055
+    locked: 0
+  - name: TrailersHigher
+    uniqueID: 184130799
     locked: 0
   - name: Default
     uniqueID: 0
