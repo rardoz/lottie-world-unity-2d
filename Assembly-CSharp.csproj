@@ -89,6 +89,7 @@
      <Compile Include="Assets/Scripts/Interpolation/InterpolatedTransform.cs" />
      <Compile Include="Assets/Scripts/AnimationEvents/PolaroidLandingAnimationEvent.cs" />
      <Compile Include="Assets/Scripts/items/PointPopUp.cs" />
+     <Compile Include="Assets/Scripts/items/TimerCounter.cs" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" />
@@ -715,9 +716,6 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Simulator.Extension">
-        <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.AdaptivePerformance.Simulator.Extension.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.IK.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
@@ -729,9 +727,6 @@
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
@@ -757,14 +752,8 @@
     <Reference Include="Unity.2D.IK.Runtime">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Simulator.Editor">
-        <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.AdaptivePerformance.Simulator.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AdaptivePerformance.Editor">
-        <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.AdaptivePerformance.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
@@ -786,9 +775,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AdaptivePerformance">
-        <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.AdaptivePerformance.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
