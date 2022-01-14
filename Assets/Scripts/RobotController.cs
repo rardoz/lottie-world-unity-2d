@@ -22,7 +22,7 @@ public class RobotController : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().freezeRotation = true;
     }
 
-    void FixedUpdate()
+    void Update()
     {
 
         moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys

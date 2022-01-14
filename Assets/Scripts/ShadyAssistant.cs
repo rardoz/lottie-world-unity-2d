@@ -80,9 +80,14 @@ public class ShadyAssistant : Death
         bool isPhoto = c2d.CompareTag("Polaroid");
         if (isPhoto)
         {
-            polaroids.Remove(c2d.gameObject);
-            totalLives--;
-            Destroy(c2d.gameObject.GetComponentInParent<TakePicture>().gameObject);
+            PickUpPolaroid(c2d.gameObject);
         }
+    }
+
+    public void PickUpPolaroid(GameObject polaroid)
+    {
+        polaroids.Remove(polaroid);
+        totalLives--;
+        Destroy(polaroid.GetComponentInParent<TakePicture>().gameObject);
     }
 }
