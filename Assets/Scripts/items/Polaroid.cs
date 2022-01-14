@@ -14,16 +14,18 @@ using UnityEngine;
 */
 public class Polaroid : Score
 {
-	public override bool ShouldTriggerEnter2D(Collider2D c2d)
-	{
-		if (c2d.gameObject.tag == "ShadyCameraAssistant")
-		{
-			Destroy(gameObject);
-		}
-		else if (c2d.gameObject.tag == "Player")
-		{
-			ShadyAssistant.polaroids.Remove(gameObject);
-		}
-		return true;
-	}
+    public override bool ShouldTriggerEnter2D(Collider2D c2d)
+    {
+        if (c2d.gameObject.tag == "ShadyCameraAssistant")
+        {
+            ShadyAssistant.polaroids.Remove(gameObject);
+            Destroy(gameObject);
+        }
+        else if (c2d.gameObject.tag == "Player")
+        {
+            ShadyAssistant.polaroids.Remove(gameObject);
+            Destroy(gameObject);
+        }
+        return true;
+    }
 }
