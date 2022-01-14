@@ -17,7 +17,7 @@ public class Life : MonoBehaviour
     {
         //Make Collider2D as trigger
         GetComponent<Collider2D>().isTrigger = true;
-        player = player ?? Camera.main.GetComponent<CameraFollow>().followObject;
+        player = player ?? Camera.main.GetComponent<CameraFollow>().followObject.GetComponent<RobotController>();
     }
 
     void OnTriggerEnter2D(Collider2D c2d)

@@ -49,28 +49,31 @@ public class ShadyAssistant : Death
 
     void EnterOrLeaveScene()
     {
-        Vector2 prevPos = transform.position;
-        if (!blinker.startBlinking && polaroids.Count > 0)
+        if (player)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), speed);
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector2(player.transform.position.x - cameraOffset, transform.position.y), speed);
-        }
-
-        if (transform.position.x - prevPos.x > 0)
-        {
-            if (transform.localScale.x < 0)
+            Vector2 prevPos = transform.position;
+            if (!blinker.startBlinking && polaroids.Count > 0 && polaroids[0] != null)
             {
-                Flip();
+                transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), speed);
             }
-        }
-        else
-        {
-            if (transform.localScale.x > 0)
+            else
             {
-                Flip();
+                transform.position = Vector3.MoveTowards(transform.position, new Vector2(player.transform.position.x - cameraOffset, transform.position.y), speed);
+            }
+
+            if (transform.position.x - prevPos.x > 0)
+            {
+                if (transform.localScale.x < 0)
+                {
+                    Flip();
+                }
+            }
+            else
+            {
+                if (transform.localScale.x > 0)
+                {
+                    Flip();
+                }
             }
         }
     }

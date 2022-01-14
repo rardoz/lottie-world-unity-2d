@@ -22,6 +22,8 @@ public class Story : MonoBehaviour
 
     protected bool isDone = false;
 
+    public GameObject messageBubble;
+
     protected string GetStoryLine()
     {
         return storyLines[storyLineIndex];

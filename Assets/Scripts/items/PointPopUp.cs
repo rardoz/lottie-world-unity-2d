@@ -16,7 +16,7 @@ public class PointPopUp : MonoBehaviour
     }
     public void ShowPoints(int points)
     {
-        label.text = "" + points;
+        label.text = (points > 0 ? "+" : "-") + points;
         StartCoroutine(ExecuteAfterTime(clearDelay));
     }
 

@@ -20,7 +20,7 @@ public class LevelStart : MonoBehaviour
 
     protected void GoToNextLevel()
     {
-        string subLabel = identifier.Length > 0 ? $" {identifier}" : "";
+        string subLabel = identifier.Length > 0 ? $"{identifier}" : "";
         SceneManager.LoadScene($"C{chapter}S{scene}{subLabel}");
     }
 }

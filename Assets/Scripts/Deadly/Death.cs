@@ -19,7 +19,7 @@ public class Death : Life
         // do nothing override to prevent bug
         if (Camera.main.GetComponent<CameraFollow>())
         {
-            player = player ?? Camera.main.GetComponent<CameraFollow>().followObject;
+            player = player ?? Camera.main.GetComponent<CameraFollow>().followObject.GetComponent<RobotController>();
             blinker = player.gameObject.GetComponent<Blinker>();
         }
     }

@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraFollow : MonoBehaviour
 {
-    public RobotController followObject;
+    public GameObject followObject;
     public Vector2 followOffset;
     private Vector2 threshold;
     public float speed = 3;
     private Rigidbody2D rb;
 
     public float followObjectOffsetY = 1.5f;
+    public float followObjectOffsetX = 0f;
 
     public bool yAxisEnabled = true;
+
+    public GameObject messageBubble;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +28,13 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (followObject == null)
+        {
+            return;
+        }
         Vector2 follow = followObject.transform.position;
         follow.y += followObjectOffsetY;
+        follow.x += followObjectOffsetX;
         float xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
         float yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
 

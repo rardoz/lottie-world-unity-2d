@@ -25,6 +25,7 @@ public class Polaroid : Score
         {
             ShadyAssistant.polaroids.Remove(gameObject);
             Destroy(gameObject);
+            RobotController.polaroidsEarned++;
         }
         return true;
     }

@@ -7,6 +7,7 @@ public class RobotController : MonoBehaviour
     public bool facingLeft = true;
     public int Playerspeed = 10;
     public int PlayerJumpPower = 1250;
+    public static int polaroidsEarned;
     public float moveX;
     public Vector2 jumpHeight;
     int JumpCount = 0;
@@ -14,6 +15,8 @@ public class RobotController : MonoBehaviour
     public Animator animate;
 
     private bool isCoroutineExecuting = false;
+
+    public bool locked = false;
 
     void Start()
     {
@@ -23,27 +26,33 @@ public class RobotController : MonoBehaviour
 
     void Update()
     {
-
-        moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
-        if (moveX != 0)
+        if (!locked)
         {
-            PlayerMove();
+            moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
+            if (moveX != 0)
+            {
+                PlayerMove();
 
-            //if we are moving left but not facing left flip, and vice versa
-            if (moveX > 0 && !facingLeft)
-            {
-                Flip();
+                //if we are moving left but not facing left flip, and vice versa
+                if (moveX > 0 && !facingLeft)
+                {
+                    Flip();
+                }
+                else if (moveX < 0 && facingLeft)
+                {
+                    Flip();
+                }
             }
-            else if (moveX < 0 && facingLeft)
+            else
             {
-                Flip();
+                animate.SetFloat("Speed", 0);
             }
+            Jump();
         }
         else
         {
             animate.SetFloat("Speed", 0);
         }
-        Jump();
     }
 
     void PlayerMove()
@@ -87,7 +96,7 @@ public class RobotController : MonoBehaviour
         isCoroutineExecuting = false;
     }
 
-    void Flip()
+    public void Flip()
     {
         facingLeft = !facingLeft;
         Vector3 theScale = transform.localScale;
