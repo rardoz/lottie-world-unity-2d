@@ -13,7 +13,6 @@ public class RobotController : MonoBehaviour
     public int MaxJumps = 1; //Maximum amount of jumps (i.e. 2 for double jumps)
     public Animator animate;
 
-    public ScoreCounter scoreCounter;
     private bool isCoroutineExecuting = false;
 
     void Start()

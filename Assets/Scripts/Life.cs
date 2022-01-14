@@ -29,9 +29,9 @@ public class Life : MonoBehaviour
             totalLives += incriment;
             if (totalLives > maxLives)
             {
-                if (player.scoreCounter && (totalLives - incriment >= maxLives))
+                if ((totalLives - incriment >= maxLives))
                 {
-                    player.scoreCounter.totalScore += pointValue;
+                    ScoreCounter.totalScore += pointValue;
                 }
                 else
                 {

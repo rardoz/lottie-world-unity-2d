@@ -16,6 +16,7 @@ TagManager:
   - Squish
   - StoryTeller
   - Barrier
+  - PointPopUp
   layers:
   - Default
   - TransparentFX

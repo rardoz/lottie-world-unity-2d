@@ -9,6 +9,8 @@ public class ParallaxBackground : MonoBehaviour
     private Transform cameraTransform;
     Vector3 lastCameraPosition;
 
+    public bool enableY = false;
+
     private void Start()
     {
         cameraTransform = Camera.main.transform;
@@ -19,7 +21,7 @@ public class ParallaxBackground : MonoBehaviour
     {
         //gameObject.GetComponent<Rigidbody2D>().velocity.y
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
-        transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, 0);
+        transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, enableY ? deltaMovement.y * parallaxEffectMultiplier.y : 0);
         lastCameraPosition = cameraTransform.position;
     }
 }

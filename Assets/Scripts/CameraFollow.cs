@@ -10,6 +10,8 @@ public class CameraFollow : MonoBehaviour
     public float speed = 3;
     private Rigidbody2D rb;
 
+    public float followObjectOffsetY = 1.5f;
+
     public bool yAxisEnabled = true;
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 follow = followObject.transform.position;
+        follow.y += followObjectOffsetY;
         float xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
         float yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
 
