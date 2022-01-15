@@ -34,7 +34,7 @@ public class Exit : LevelStart
 
     protected virtual string awaredMessage => "That was fast! You earned +" + awardAmount + " point bonus!";
     protected virtual string awaredMessage2 => "And you found " + RobotController.polaroidsEarned + " bad polaroids! Thats " + ((RobotController.polaroidsEarned - minPolaroids) == 0 ? "no" : (RobotController.polaroidsEarned - minPolaroids) + "") + " more than expected!";
-    protected virtual string awaredMessage3 => "Thiss gives you a total of " + (awardAmount + ScoreCounter.totalScore) + "! Now we can book your next gig!";
+    protected virtual string awaredMessage3 => "This gives you a total of " + (awardAmount + ScoreCounter.totalScore) + "! Now we can book your next gig!";
     protected virtual string needMoreMessage => "You need " + (minPolaroids - RobotController.polaroidsEarned) + " more pictures before we can have some real food...";
 
     void Start()
