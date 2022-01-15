@@ -6,20 +6,16 @@ using UnityEngine.SceneManagement;
 
 /*
     Exit should:
-    [ ] countdown remaining seconds really fast
+    [x] countdown remaining seconds really fast
     [ ] countdown should make a sound
-    [ ] go to the next level if more than 10 polaroids
-    [ ] provide messaging with how many polaroids are remaining
-    [ ] Provide summary of earnings
+    [x] go to the next level if more than 10 polaroids
+    [x] provide messaging with how many polaroids are remaining
+    [x] Provide summary of earnings
     [ ] Leave the scene with lottie (camera should stay in place)
-    [ ] Lock the scene when lottie walks into the exit
-    [ ] Scene should unlock if we aren't allowed
+    [x] Lock the scene when lottie walks into the exit
+    [x] Scene should unlock if we aren't allowed
 */
-enum EXIT_MESSAGE_TYPES
-{
-    NEED_MORE_MESSAGE,
-    CUSTOM_MESSAGE
-}
+
 public class Exit : LevelStart
 {
     public TimerCounter timerCounter;
@@ -31,31 +27,25 @@ public class Exit : LevelStart
 
     CameraFollow cam;
 
-    Text message;
-
-    bool pendingMessageAcknowledgment = false;
 
     public int awardAmount = 0;
 
     protected bool shouldGoToNextLevel = false;
 
+    protected virtual string awaredMessage => "That was fast! You earned +" + awardAmount + " point bonus!";
+    protected virtual string awaredMessage2 => "And you found " + RobotController.polaroidsEarned + " bad polaroids! Thats " + ((RobotController.polaroidsEarned - minPolaroids) == 0 ? "no" : (RobotController.polaroidsEarned - minPolaroids) + "") + " more than expected!";
+    protected virtual string awaredMessage3 => "Thiss gives you a total of " + (awardAmount + ScoreCounter.totalScore) + "! Now we can book your next gig!";
+    protected virtual string needMoreMessage => "You need " + (minPolaroids - RobotController.polaroidsEarned) + " more pictures before we can have some real food...";
+
     void Start()
     {
         cam = Camera.main.GetComponent<CameraFollow>();
-
-        message = cam.messageBubble.GetComponentInChildren<Text>();
+        cam.messageBubble.enabled = false;
     }
 
     void Update()
     {
-        if (pendingMessageAcknowledgment)
-        {
-            if (Input.GetButton("Jump"))
-            {
-                TurnOffMessageBubble();
-            }
-        }
-        else if (rb != null)
+        if (rb != null && cam.messageBubble.isDone)
         {
             if (Input.GetButton("Jump") || Input.GetAxis("Horizontal") < 0)
             {
@@ -63,7 +53,6 @@ public class Exit : LevelStart
                 {
                     GoToNextLevel();
                 }
-                else
                 if (rb.locked == true)
                 {
                     UnlockScene();
@@ -85,36 +74,27 @@ public class Exit : LevelStart
         }
         cam.followObject = gameObject;
         cam.followObjectOffsetX = -2f;
-        TurnOnMessageBubble();
-    }
-
-    void TurnOnMessageBubble()
-    {
-        cam.messageBubble.SetActive(true);
-    }
-
-    void TurnOffMessageBubble()
-    {
-        cam.messageBubble.SetActive(false);
-        pendingMessageAcknowledgment = false;
     }
 
     void UnlockScene()
     {
-        if (rb)
+        if (cam.messageBubble.isDone)
         {
-            rb.locked = false;
-            cam.followObject = rb.gameObject;
+            if (rb)
+            {
+                rb.locked = false;
+                cam.followObject = rb.gameObject;
+            }
+            cam.followObjectOffsetX = originalX;
+            timerCounter.UnpauseTimer();
+            cam.messageBubble.TurnOffMessageBubble();
         }
-        cam.followObjectOffsetX = originalX;
-        timerCounter.UnpauseTimer();
-        TurnOffMessageBubble();
     }
 
     void ContinueCurrentLevel()
     {
         timerCounter.PauseTimer();
-        SaySomething(EXIT_MESSAGE_TYPES.NEED_MORE_MESSAGE, "You still need stuff...");
+        SaySomething(needMoreMessage);
     }
 
     void OnTriggerEnter2D(Collider2D c2d)
@@ -138,34 +118,49 @@ public class Exit : LevelStart
         }
     }
 
-    void StartNextLevel()
+    void GetBonusPoints()
     {
         awardAmount += timerCounter.secondsRemaining * 100;
+        awardAmount += Life.totalLives * 500;
+        ScoreCounter.totalScore += awardAmount;
+    }
+
+    void StartNextLevel()
+    {
+        GetBonusPoints();
         CountdownRemainingSeconds();
         if (awardAmount > 0)
         {
-            SaySomething(EXIT_MESSAGE_TYPES.CUSTOM_MESSAGE, awaredMessage);
+            SaySomething(awaredMessage, awaredMessage2, awaredMessage3);
         }
     }
 
-    protected virtual string awaredMessage => "+" + awardAmount + " point bonus!";
-    protected virtual string needMoreMessage => "You need " + (minPolaroids - RobotController.polaroidsEarned) + " more pictures before we can have some real food...";
-
-    void SaySomething(EXIT_MESSAGE_TYPES thatSomething, string defaultMessage)
+    void SaySomething(string message)
     {
-        if (thatSomething == EXIT_MESSAGE_TYPES.NEED_MORE_MESSAGE)
-        {
-            message.text = needMoreMessage;
-        }
-        else
-        {
-            message.text = defaultMessage;
-        }
-        if (!cam.messageBubble.activeSelf)
-        {
-            TurnOnMessageBubble();
-        }
-        pendingMessageAcknowledgment = true;
+
+        cam.messageBubble.SetStoryLines(new string[]{
+            message
+        });
+        cam.messageBubble.TurnOnMessageBubble();
+    }
+
+    void SaySomething(string message, string message2)
+    {
+        cam.messageBubble.SetStoryLines(new string[]{
+            message,
+            message2
+        });
+        cam.messageBubble.TurnOnMessageBubble();
+    }
+
+    void SaySomething(string message, string message2, string message3)
+    {
+        cam.messageBubble.SetStoryLines(new string[]{
+            message,
+            message2,
+            message3
+        });
+        cam.messageBubble.TurnOnMessageBubble();
     }
 
     void CountdownRemainingSeconds()

@@ -52,9 +52,16 @@ public class ShadyAssistant : Death
         if (player)
         {
             Vector2 prevPos = transform.position;
-            if (!blinker.startBlinking && polaroids.Count > 0 && polaroids[0] != null)
+            if (!blinker.startBlinking && polaroids.Count > 0)
             {
-                transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), speed);
+                try
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, new Vector2((polaroids[0] as GameObject).transform.position.x, transform.position.y), speed);
+                }
+                catch
+                {
+                    polaroids.Remove(0);
+                }
             }
             else
             {

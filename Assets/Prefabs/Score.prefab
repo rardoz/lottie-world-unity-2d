@@ -262,8 +262,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.013000488, y: 1.4702759}
-  m_SizeDelta: {x: 192.1339, y: 57.5257}
+  m_AnchoredPosition: {x: 0.0214, y: 1.5253}
+  m_SizeDelta: {x: 182.0356, y: 47.8314}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6989214878561436933
 CanvasRenderer:
@@ -493,7 +493,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsRemaining: 120
   tickerDelay: 1
+  defaultTickerDelay: 1
   timeIsUp: 0
+  pause: 0
 --- !u!1001 &2480860357146148753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,6 +503,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5075869003765481132}
     m_Modifications:
+    - target: {fileID: 1799004800956947605, guid: f374a5f2cb0b74d5297a496595d03b9c,
+        type: 3}
+      propertyPath: bubbleText
+      value: 
+      objectReference: {fileID: 869768310748000677}
+    - target: {fileID: 1799004800956947605, guid: f374a5f2cb0b74d5297a496595d03b9c,
+        type: 3}
+      propertyPath: TakeoverCanvas
+      value: 
+      objectReference: {fileID: 5075869003765481120}
     - target: {fileID: 4112804784435248202, guid: f374a5f2cb0b74d5297a496595d03b9c,
         type: 3}
       propertyPath: m_Name
@@ -509,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 4112804784435248202, guid: f374a5f2cb0b74d5297a496595d03b9c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4112804784435248203, guid: f374a5f2cb0b74d5297a496595d03b9c,
         type: 3}
@@ -519,17 +531,17 @@ PrefabInstance:
     - target: {fileID: 4112804784435248203, guid: f374a5f2cb0b74d5297a496595d03b9c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7315
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 4112804784435248203, guid: f374a5f2cb0b74d5297a496595d03b9c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7315
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 4112804784435248203, guid: f374a5f2cb0b74d5297a496595d03b9c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7315
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 4112804784435248203, guid: f374a5f2cb0b74d5297a496595d03b9c,
         type: 3}

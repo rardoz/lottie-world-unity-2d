@@ -16,7 +16,7 @@ public class CameraFollow : MonoBehaviour
 
     public bool yAxisEnabled = true;
 
-    public GameObject messageBubble;
+    public Story messageBubble;
 
     // Start is called before the first frame update
     void Start()

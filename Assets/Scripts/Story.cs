@@ -20,13 +20,44 @@ public class Story : MonoBehaviour
 
     public int characterIndex = 0;
 
-    protected bool isDone = false;
+    public bool isDone = false;
 
     public GameObject messageBubble;
 
     protected string GetStoryLine()
     {
         return storyLines[storyLineIndex];
+    }
+
+    public void SetStoryLines(string[] newStorylines)
+    {
+        storyLines = newStorylines;
+    }
+
+    public void TurnOffMessageBubble()
+    {
+        shouldPause = false;
+        startReading = false;
+        enabled = false;
+        storyLineIndex = 0;
+        characterIndex = 0;
+        isDone = true;
+        bubbleText.text = "";
+        messageBubble.SetActive(false);
+        bubbleText.gameObject.SetActive(false);
+    }
+
+    public void TurnOnMessageBubble()
+    {
+        bubbleText.text = "";
+        shouldPause = false;
+        enabled = true;
+        storyLineIndex = 0;
+        characterIndex = 0;
+        isDone = false;
+        messageBubble.SetActive(true);
+        bubbleText.gameObject.SetActive(true);
+        startReading = true;
     }
 
     protected virtual void OnFinishedStoryLines()

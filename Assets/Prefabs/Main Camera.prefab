@@ -105,8 +105,7 @@ MonoBehaviour:
   followObjectOffsetY: 2
   followObjectOffsetX: 0
   yAxisEnabled: 1
-  messageBubble: {fileID: 2530868197076010867}
-  messageBubbleText: {fileID: 3779415004479714573}
+  messageBubble: {fileID: 214963644742789036}
 --- !u!114 &778379208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,21 +215,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4062568229444109480}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3779415004479714573 stripped
+--- !u!114 &214963644742789036 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 869768310748000677, guid: 5de86cb7310f646da9e66b1828d61340,
+  m_CorrespondingSourceObject: {fileID: 4222845983895692036, guid: 5de86cb7310f646da9e66b1828d61340,
     type: 3}
   m_PrefabInstance: {fileID: 4062568229444109480}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: b15f95e8c389340fe9ffe1a94fe3fcd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2530868197076010867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1981117028592862171, guid: 5de86cb7310f646da9e66b1828d61340,
-    type: 3}
-  m_PrefabInstance: {fileID: 4062568229444109480}
-  m_PrefabAsset: {fileID: 0}

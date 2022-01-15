@@ -4848,6 +4848,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2530868197076010866, guid: 7578a7035083c46c3902a0723da064b2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -670.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2530868197076010867, guid: 7578a7035083c46c3902a0723da064b2,
         type: 3}
       propertyPath: m_IsActive
@@ -5610,6 +5615,7 @@ MonoBehaviour:
   identifier: Intro
   timerCounter: {fileID: 61108651}
   minPolaroids: 10
+  awardAmount: 0
 --- !u!61 &1845280927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5672,12 +5678,12 @@ PrefabInstance:
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.86
+      value: 77.73
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.96
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: 3006658706532066923, guid: 823278527f24a4c9a99de16dff4d090b,
         type: 3}
