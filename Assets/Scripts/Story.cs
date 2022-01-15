@@ -24,6 +24,8 @@ public class Story : MonoBehaviour
 
     public GameObject messageBubble;
 
+    public Animator storyTellerAnimator;
+
     protected string GetStoryLine()
     {
         return storyLines[storyLineIndex];

@@ -37,7 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/Life.cs" />
+     <Compile Include="Assets/Scripts/items/PointPopUp.cs" />
      <Compile Include="Assets/Scripts/Weapons/Bullet.cs" />
+     <Compile Include="Assets/Scripts/Exits/Exit.cs" />
      <Compile Include="Assets/Scripts/items/PolaroidCounter.cs" />
      <Compile Include="Assets/Scripts/Weapons/Bow.cs" />
      <Compile Include="Assets/Scripts/items/ParallaxBackground.cs" />
@@ -51,6 +53,7 @@
      <Compile Include="Assets/Scripts/items/Bacon.cs" />
      <Compile Include="Assets/Scripts/Blinker.cs" />
      <Compile Include="Assets/Scripts/items/TomatoCounter.cs" />
+     <Compile Include="Assets/Scripts/Exits/NatalieWintersExit.cs" />
      <Compile Include="Assets/Scripts/Stories/NatalieWintersStory.cs" />
      <Compile Include="Assets/Scripts/LightToggler.cs" />
      <Compile Include="Assets/Scripts/CameraFollow.cs" />
@@ -62,6 +65,8 @@
      <Compile Include="Assets/Scripts/LevelStart.cs" />
      <Compile Include="Assets/Sprites/4000+SinplePixelIconPack/Scripts/MoveDemo.cs" />
      <Compile Include="Assets/Scripts/Deadly/Pit.cs" />
+     <Compile Include="Assets/Scripts/AnimationEvents/PolaroidLandingAnimationEvent.cs" />
+     <Compile Include="Assets/Scripts/Interpolation/InterpolatedTransformUpdater.cs" />
      <Compile Include="Assets/Scripts/Photographer.cs" />
      <Compile Include="Assets/Scripts/Deadly/Kill.cs" />
      <Compile Include="Assets/Scripts/Deadly/Death.cs" />
@@ -71,9 +76,12 @@
      <Compile Include="Assets/Scripts/items/Score.cs" />
      <Compile Include="Assets/Scripts/LifeCounter.cs" />
      <Compile Include="Assets/Scripts/items/Takeover.cs" />
+     <Compile Include="Assets/Scripts/Interpolation/InterpolatedTransform.cs" />
      <Compile Include="Assets/Scripts/TakePicture.cs" />
+     <Compile Include="Assets/Scripts/items/TimerCounter.cs" />
      <Compile Include="Assets/Scripts/Plaforms/VerticalPlatform.cs" />
      <Compile Include="Assets/Scripts/items/Polaroid.cs" />
+     <Compile Include="Assets/Scripts/Interpolation/InterpolationController.cs" />
      <Compile Include="Assets/Scripts/Deadly/DeathPlant.cs" />
      <Compile Include="Assets/Scripts/Flash.cs" />
      <Compile Include="Assets/Scripts/items/CornCounter.cs" />
@@ -84,14 +92,7 @@
      <Compile Include="Assets/Scripts/Coin.cs" />
      <Compile Include="Assets/Scripts/LifeProgress.cs" />
      <Compile Include="Assets/Scripts/Stories/DwayneStory.cs" />
-     <Compile Include="Assets/Scripts/Interpolation/InterpolatedTransformUpdater.cs" />
-     <Compile Include="Assets/Scripts/Interpolation/InterpolationController.cs" />
-     <Compile Include="Assets/Scripts/Interpolation/InterpolatedTransform.cs" />
-     <Compile Include="Assets/Scripts/AnimationEvents/PolaroidLandingAnimationEvent.cs" />
-     <Compile Include="Assets/Scripts/items/PointPopUp.cs" />
-     <Compile Include="Assets/Scripts/items/TimerCounter.cs" />
-     <Compile Include="Assets/Scripts/Exits/NatalieWintersExit.cs" />
-     <Compile Include="Assets/Scripts/Exits/Exit.cs" />
+     <Compile Include="Assets/Scripts/AnimationEvents/StoryTellerWalkAnimationEvent.cs" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" />
@@ -730,6 +731,9 @@
     <Reference Include="Unity.2D.Path.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+        <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
@@ -741,9 +745,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>/Users/roe/Projects/lottie-world-unity-2d/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
