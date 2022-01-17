@@ -51,7 +51,7 @@ public class Exit : LevelStart
             {
                 if (shouldGoToNextLevel)
                 {
-                    GoToNextLevel();
+                    NextLevel();
                 }
                 if (rb.locked == true)
                 {
@@ -59,6 +59,17 @@ public class Exit : LevelStart
                 }
             }
         }
+    }
+
+    private void NextLevel()
+    {
+        Life.totalLives = Life.maxLives;
+        RobotController.polaroidsEarned = 0;
+        Debug.Log("Before: " + ScoreCounter.totalScore);
+        ScoreCounter.totalScore += awardAmount;
+        Debug.Log("After: " + ScoreCounter.totalScore);
+        awardAmount = 0;
+        GoToNextLevel();
     }
 
     void LockScene()
@@ -122,11 +133,11 @@ public class Exit : LevelStart
     {
         awardAmount += timerCounter.secondsRemaining * 100;
         awardAmount += Life.totalLives * 500;
-        ScoreCounter.totalScore += awardAmount;
     }
 
     void StartNextLevel()
     {
+        ShadyAssistant.polaroids = new ArrayList();
         GetBonusPoints();
         CountdownRemainingSeconds();
         if (awardAmount > 0)
