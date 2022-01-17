@@ -48,6 +48,7 @@
      <Compile Include="Assets/Scripts/GameOver.cs" />
      <Compile Include="Assets/Scripts/NextLevel.cs" />
      <Compile Include="Assets/Scripts/items/BaconCounter.cs" />
+     <Compile Include="Assets/Scripts/AnimationEvents/StoryTellerWalkAnimationEvent.cs" />
      <Compile Include="Assets/Scripts/RobotController.cs" />
      <Compile Include="Assets/Scripts/Weapons/Shoot.cs" />
      <Compile Include="Assets/Scripts/items/Bacon.cs" />
@@ -92,7 +93,7 @@
      <Compile Include="Assets/Scripts/Coin.cs" />
      <Compile Include="Assets/Scripts/LifeProgress.cs" />
      <Compile Include="Assets/Scripts/Stories/DwayneStory.cs" />
-     <Compile Include="Assets/Scripts/AnimationEvents/StoryTellerWalkAnimationEvent.cs" />
+     <Compile Include="Assets/Scripts/Deadly/TumbleweedTrigger.cs" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" />
