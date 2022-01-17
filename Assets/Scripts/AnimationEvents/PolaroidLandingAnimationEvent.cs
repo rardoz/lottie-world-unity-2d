@@ -9,8 +9,11 @@ public class PolaroidLandingAnimationEvent : MonoBehaviour
     {
         if (message.Equals("PolaroidLanding"))
         {
-            // cool to know: GameObject.FindGameObjectWithTag("ShadyCameraAssistant")
-            ShadyAssistant.polaroids.Add(gameObject);
+            Polaroid p = gameObject.GetComponent<Polaroid>();
+            if (p.shouldBeFollowed)
+            {
+                ShadyAssistant.polaroids.Add(gameObject);
+            }
         }
     }
 }

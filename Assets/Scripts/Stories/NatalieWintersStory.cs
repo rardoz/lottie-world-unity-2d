@@ -13,7 +13,7 @@ public class NatalieWintersStory : Story
             "In fact, you did so good the photographer said he would pay you next time!",
             "Before I go… That shady assistant told me he knows your mother.",
             "You wouldn't want these pictures to get into the wrong hands. It would be a PR nightmare!",
-            "Collect at least 20 pictures from the next kinky salad photoshoot.",
+            "Collect at least 15 photos from the next kinky salad photoshoot.",
             "And watch out for tumbleweeds! I think there might be bear traps too. Lets go!"
         };
 

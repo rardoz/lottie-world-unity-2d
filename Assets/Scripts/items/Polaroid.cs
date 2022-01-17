@@ -14,6 +14,7 @@ using UnityEngine;
 */
 public class Polaroid : Score
 {
+    public bool shouldBeFollowed = true;
     public override bool ShouldTriggerEnter2D(Collider2D c2d)
     {
         if (c2d.gameObject.tag == "ShadyCameraAssistant")
