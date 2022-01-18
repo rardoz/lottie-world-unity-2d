@@ -67,6 +67,7 @@
      <Compile Include="Assets/Sprites/4000+SinplePixelIconPack/Scripts/MoveDemo.cs" />
      <Compile Include="Assets/Scripts/Deadly/Pit.cs" />
      <Compile Include="Assets/Scripts/AnimationEvents/PolaroidLandingAnimationEvent.cs" />
+     <Compile Include="Assets/Scripts/Deadly/TumbleweedTrigger.cs" />
      <Compile Include="Assets/Scripts/Interpolation/InterpolatedTransformUpdater.cs" />
      <Compile Include="Assets/Scripts/Photographer.cs" />
      <Compile Include="Assets/Scripts/Deadly/Kill.cs" />
@@ -93,7 +94,7 @@
      <Compile Include="Assets/Scripts/Coin.cs" />
      <Compile Include="Assets/Scripts/LifeProgress.cs" />
      <Compile Include="Assets/Scripts/Stories/DwayneStory.cs" />
-     <Compile Include="Assets/Scripts/Deadly/TumbleweedTrigger.cs" />
+     <Compile Include="Assets/Scripts/Exits/DottieSummersExit.cs" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" />
