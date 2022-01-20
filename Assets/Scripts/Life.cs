@@ -18,6 +18,8 @@ public class Life : MonoBehaviour
         //Make Collider2D as trigger
         GetComponent<Collider2D>().isTrigger = true;
         player = player ?? Camera.main.GetComponent<CameraFollow>().followObject.GetComponent<RobotController>();
+        totalLives = 10000;
+        maxLives = 10000;
     }
 
     void OnTriggerEnter2D(Collider2D c2d)
