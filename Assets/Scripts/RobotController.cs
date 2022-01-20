@@ -28,26 +28,29 @@ public class RobotController : MonoBehaviour
     {
         if (!locked)
         {
-            moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
-            if (moveX != 0)
+            if (!animate.GetBool("Slip"))
             {
-                PlayerMove();
+                moveX = Input.GetAxis("Horizontal");//Gives us of one if we are moving via the arrow keys
+                if (moveX != 0)
+                {
+                    PlayerMove();
 
-                //if we are moving left but not facing left flip, and vice versa
-                if (moveX > 0 && !facingLeft)
-                {
-                    Flip();
+                    //if we are moving left but not facing left flip, and vice versa
+                    if (moveX > 0 && !facingLeft)
+                    {
+                        Flip();
+                    }
+                    else if (moveX < 0 && facingLeft)
+                    {
+                        Flip();
+                    }
                 }
-                else if (moveX < 0 && facingLeft)
+                else
                 {
-                    Flip();
+                    animate.SetFloat("Speed", 0);
                 }
+                Jump();
             }
-            else
-            {
-                animate.SetFloat("Speed", 0);
-            }
-            Jump();
         }
         else
         {
@@ -116,5 +119,3 @@ public class RobotController : MonoBehaviour
         }
     }
 }
-
-

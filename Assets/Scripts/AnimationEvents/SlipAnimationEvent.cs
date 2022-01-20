@@ -5,7 +5,7 @@ using UnityEngine;
 //attach to polaroid with animation
 public class SlipAnimationEvent : MonoBehaviour
 {
-    public void AlertObservers(string message)
+    public void SlipAnimationAlertObserver(string message)
     {
         if (message.Equals("SlipFinished"))
         {
