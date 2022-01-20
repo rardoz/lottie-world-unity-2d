@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 8986811913340505964}
   - component: {fileID: 6741893398065600814}
   - component: {fileID: 450870611}
+  - component: {fileID: 6721925292863906130}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -975,7 +976,8 @@ MonoBehaviour:
   moveX: 0
   jumpHeight: {x: 0, y: 15}
   MaxJumps: 1
-  scoreCounter: {fileID: 0}
+  animate: {fileID: 0}
+  locked: 0
 --- !u!50 &7662626035287648851
 Rigidbody2D:
   serializedVersion: 4
@@ -1094,6 +1096,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6721925292863906130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7662626035287648852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51512c34adf8c4cd4b7b533c8e7b812e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8616914442146055844
 GameObject:
   m_ObjectHideFlags: 0

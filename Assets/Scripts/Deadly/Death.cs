@@ -29,12 +29,17 @@ public class Death : Life
         SceneManager.LoadScene(scene.name);
     }
 
-    protected void OnTriggerEntered(Collider2D c2d)
+    public virtual bool ShouldKill(Collider2D c2d)
     {
         bool isPlayer = c2d.CompareTag("Player");
+        return isPlayer && !blinker.startBlinking;
+    }
+
+    protected void OnTriggerEntered(Collider2D c2d)
+    {
 
         //Destroy the life if Object tagged Player comes in contact with it
-        if (isPlayer && !blinker.startBlinking)
+        if (ShouldKill(c2d))
         {
             blinker.startBlinking = true;
             //Destroy life
