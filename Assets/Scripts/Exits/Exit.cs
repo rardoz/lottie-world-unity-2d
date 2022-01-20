@@ -21,11 +21,15 @@ public class Exit : LevelStart
     public TimerCounter timerCounter;
     public int minPolaroids = 10;
 
+    protected bool permaLocked = false;
+
     RobotController rb;
+
+    public bool shouldWaitForExitAnimation = false;
 
     private float originalX = 0.0f;
 
-    CameraFollow cam;
+    protected CameraFollow cam;
 
 
     public int awardAmount = 0;
@@ -49,14 +53,23 @@ public class Exit : LevelStart
         {
             if (Input.GetButton("Jump") || Input.GetAxis("Horizontal") < 0)
             {
-                if (shouldGoToNextLevel)
+                if (shouldGoToNextLevel && !shouldWaitForExitAnimation)
                 {
                     NextLevel();
+                }
+                else if (shouldGoToNextLevel && shouldWaitForExitAnimation && gameObject.GetComponent<Animator>().GetBool("Exit") != true)
+                {
+                    gameObject.GetComponent<Animator>().SetBool("Exit", true);
+                    cam.messageBubble.TurnOffMessageBubble();
                 }
                 if (rb.locked == true)
                 {
                     UnlockScene();
                 }
+            }
+            else if (permaLocked && shouldGoToNextLevel && !shouldWaitForExitAnimation)
+            {
+                NextLevel();
             }
         }
     }
@@ -89,7 +102,7 @@ public class Exit : LevelStart
 
     void UnlockScene()
     {
-        if (cam.messageBubble.isDone)
+        if (!permaLocked && cam.messageBubble.isDone)
         {
             if (rb)
             {
@@ -135,6 +148,12 @@ public class Exit : LevelStart
         awardAmount += Life.totalLives * 500;
     }
 
+    protected virtual void SayExtra()
+    {
+        // cam.messageBubble.storyLines.SetValue("test", cam.messageBubble.storyLines.Length);
+        // cam.messageBubble.SetStoryLines(cam.messageBubble.storyLines);
+    }
+
     void StartNextLevel()
     {
         ShadyAssistant.polaroids = new ArrayList();
@@ -143,6 +162,7 @@ public class Exit : LevelStart
         if (awardAmount > 0)
         {
             SaySomething(awaredMessage, awaredMessage2, awaredMessage3);
+            SayExtra();
         }
     }
 

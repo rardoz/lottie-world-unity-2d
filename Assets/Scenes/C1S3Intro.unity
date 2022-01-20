@@ -390,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed235da0c29f434aba99ebfc19bdb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyLines: []
   bubbleText: {fileID: 17577114}
   TakeoverCanvas: {fileID: 510640192}
   readingTimer: 0
@@ -2575,7 +2576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chapter: 1
-  scene: 2
+  scene: 3
   identifier: 
 --- !u!4 &9083830477571291622
 Transform:

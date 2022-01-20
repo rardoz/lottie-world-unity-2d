@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Story : MonoBehaviour
 {
-    protected string[] storyLines;
+    public string[] storyLines;
     protected int storyLineIndex = 0;
 
     protected bool shouldPause = false;
