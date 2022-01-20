@@ -13,13 +13,13 @@ public class Life : MonoBehaviour
     public int incriment = 1;
 
     public RobotController player;
+
+    public bool infinitLives = false;
     void Awake()
     {
         //Make Collider2D as trigger
         GetComponent<Collider2D>().isTrigger = true;
         player = player ?? Camera.main.GetComponent<CameraFollow>().followObject.GetComponent<RobotController>();
-        totalLives = 10000;
-        maxLives = 10000;
     }
 
     void OnTriggerEnter2D(Collider2D c2d)

@@ -118,7 +118,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3876261032060348131}
-  m_LocalRotation: {x: 0, y: 0, z: -0.2419447, w: 0.97029006}
+  m_LocalRotation: {x: 0, y: 0, z: -0.15383765, w: 0.9880962}
   m_LocalPosition: {x: 0.1327997, y: 0.00000008515846, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -240,7 +240,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3876261032978817390}
-  m_LocalRotation: {x: 0, y: 0, z: -0.022304408, w: 0.99975127}
+  m_LocalRotation: {x: 0, y: 0, z: -0.029240968, w: 0.9995724}
   m_LocalPosition: {x: 0.29847726, y: -0.00000048389666, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -552,13 +552,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3876261033611673294}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7817486, w: 0.62359387}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7437233, w: 0.6684877}
   m_LocalPosition: {x: 2.9558706, y: 0.0000066706702, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3876261033893426242}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -102.842}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -96.099}
 --- !u!1 &3876261033618262574
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +728,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -8.695909, y: -9.605644}
+  m_Offset: {x: -8.695909, y: -8.041143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -739,7 +739,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.07033, y: 0.71871185}
+  m_Size: {x: 14.07033, y: 0.8985419}
   m_EdgeRadius: 0
 --- !u!61 &653531068183986884
 BoxCollider2D:
@@ -754,7 +754,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.5982319, y: 111.768036}
+  m_Offset: {x: 1.5982318, y: 112.48734}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -765,7 +765,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.153535, y: 243.466}
+  m_Size: {x: 6.153535, y: 242.02739}
   m_EdgeRadius: 0
 --- !u!114 &3876261033769888057
 MonoBehaviour:
@@ -814,8 +814,8 @@ MonoBehaviour:
   - {fileID: 3876261033893426242}
   - {fileID: 3876261033357850847}
   m_Bounds:
-    m_Center: {x: 1.0979383, y: -0.14969635, z: 0}
-    m_Extent: {x: 2.4724658, y: 8.252426, z: 0}
+    m_Center: {x: 1.0957115, y: -0.15513992, z: 0}
+    m_Extent: {x: 2.470239, y: 8.256792, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &3876261033769888063
@@ -887,13 +887,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3876261033887160015}
-  m_LocalRotation: {x: -0, y: -0, z: -0.08913701, w: 0.99601936}
+  m_LocalRotation: {x: -0, y: -0, z: -0.053871542, w: 0.9985479}
   m_LocalPosition: {x: 1.7678174, y: 0.0000006658466, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3876261033909584810}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6.176}
 --- !u!1 &3876261033893426241
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +917,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3876261033893426241}
-  m_LocalRotation: {x: 0, y: 0, z: -0.000000020480565, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0008057815, w: 0.9999997}
   m_LocalPosition: {x: 3.21566, y: -0.0000029026944, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -948,7 +948,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3876261033909584809}
-  m_LocalRotation: {x: 0, y: 0, z: 0.00000007422154, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08727023, w: 0.9961847}
   m_LocalPosition: {x: 1.5255841, y: -0.00000021939175, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
