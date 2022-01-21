@@ -7,7 +7,7 @@ public class SlayanneExitStory : Exit
     protected override string awaredMessage => "Well the good news is you earned +" + awardAmount + " in extra bonus points!";
     protected override string awaredMessage2 => "And you found " + RobotController.polaroidsEarned + " bad polaroids! Thats " + ((RobotController.polaroidsEarned - minPolaroids) == 0 ? "no" : (RobotController.polaroidsEarned - minPolaroids) + "") + " more than expected!";
     protected override string awaredMessage3 => "This gives you a total of " + (awardAmount + ScoreCounter.totalScore) + "! Now its time for the bad news...";
-    protected override string needMoreMessage => "You need " + (minPolaroids - RobotController.polaroidsEarned) + " more photos before we can have a ponderosa.";
+    protected override string needMoreMessage => "You need " + (minPolaroids - RobotController.polaroidsEarned) + " more photos before we can leave for the show!";
 
     protected override void SayExtra()
     {
@@ -36,7 +36,7 @@ public class SlayanneExitStory : Exit
     {
         if (message.Equals("SlayanneExitFinished"))
         {
-            shouldWaitForExitAnimation = false;
+            GoToNextLevel();
         }
     }
 }

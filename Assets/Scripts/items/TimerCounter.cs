@@ -20,7 +20,7 @@ public class TimerCounter : MonoBehaviour
         StartCoroutine(StartCountdown());
     }
 
-    IEnumerator StartCountdown()
+    public IEnumerator StartCountdown()
     {
         while (secondsRemaining > 0)
         {
@@ -69,5 +69,14 @@ public class TimerCounter : MonoBehaviour
     {
         tickerDelay = defaultTickerDelay;
         pause = false;
+    }
+
+    public void ResetTimer(int seconds)
+    {
+        secondsRemaining = seconds;
+        UnpauseTimer();
+        timeIsUp = false;
+        counterText.color = originalColor;
+        Start();
     }
 }

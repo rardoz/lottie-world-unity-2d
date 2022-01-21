@@ -78,9 +78,7 @@ public class Exit : LevelStart
     {
         Life.totalLives = Life.maxLives;
         RobotController.polaroidsEarned = 0;
-        Debug.Log("Before: " + ScoreCounter.totalScore);
         ScoreCounter.totalScore += awardAmount;
-        Debug.Log("After: " + ScoreCounter.totalScore);
         awardAmount = 0;
         GoToNextLevel();
     }
@@ -100,7 +98,7 @@ public class Exit : LevelStart
         cam.followObjectOffsetX = -2f;
     }
 
-    void UnlockScene()
+    protected void UnlockScene()
     {
         if (!permaLocked && cam.messageBubble.isDone)
         {
