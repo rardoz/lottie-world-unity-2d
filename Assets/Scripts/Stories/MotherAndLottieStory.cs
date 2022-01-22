@@ -14,8 +14,8 @@ public class MotherAndLottieStory : MultiStory
 
         storyLines = new StoryObject[]{
             new StoryObject(firstStoryTeller, firstMessageBubble, "Mwahahahahaa! I got you now!"),
-            new StoryObject(secondStoryTeller, secondMessageBubble, "Hello..."),
-            new StoryObject(secondStoryTeller, secondMessageBubble, "mother..."),
+            new StoryObject(secondStoryTeller, secondMessageBubble, "Hello... mother"),
+            new StoryObject(secondStoryTeller, secondMessageBubble, "You stopped making jesus birthday cakes long enough to torture me."),
             new StoryObject(firstStoryTeller, firstMessageBubble, "A shady looking character sold me some naughty photos of you."),
             new StoryObject(firstStoryTeller, firstMessageBubble, "It cost me a dollar ninty-three for the first few, but then they jacked up the price to a dollar ninty-five cause of inflation."),
             new StoryObject(firstStoryTeller, firstMessageBubble, "But it was worth it because I'm about to ruin you. Say hello to Elton John when you get to gay hell for mommy."),
