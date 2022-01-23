@@ -16,7 +16,7 @@ public class Death : Life
 
     void Awake()
     {
-        infinitLives = true;
+        //infinitLives = true;
         // do nothing override to prevent bug
         if (Camera.main.GetComponent<CameraFollow>())
         {
@@ -40,7 +40,7 @@ public class Death : Life
     {
 
         //Destroy the life if Object tagged Player comes in contact with it
-        if (ShouldKill(c2d) && !infinitLives)
+        if (ShouldKill(c2d) && !infinitLives && !blinker.startBlinking)
         {
             blinker.startBlinking = true;
             //Destroy life

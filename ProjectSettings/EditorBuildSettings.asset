@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/C1S4Intro.unity
     guid: 1119fcf2749a64943856e2abbd45b9be
   - enabled: 1
+    path: Assets/Scenes/C1S4.unity
+    guid: 20dd6aabf94dc4ba7a935ecef44937ed
+  - enabled: 1
     path: Assets/Scenes/game-over.unity
     guid: 2d2e3a3a35f0445c2baacc7f75b116e7
   m_configObjects:
