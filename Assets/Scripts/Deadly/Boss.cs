@@ -46,8 +46,17 @@ public abstract class Boss : MonoBehaviour
         SceneManager.LoadScene("game-over");
     }
 
+
+    void OnCollisionEnter2D(Collision2D Col)
+    {
+        if (Col.gameObject.tag == "Player")
+        {
+            Physics2D.IgnoreCollision(Col.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+    }
+
     public virtual void Attack()
     {
-
+        gameObject.GetComponent<Animator>().SetBool("Attack", false);
     }
 }

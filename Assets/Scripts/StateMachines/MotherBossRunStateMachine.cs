@@ -10,7 +10,7 @@ public class MotherBossRunStateMachine : StateMachineBehaviour
     Rigidbody2D rb;
 
     public float speed = 2.5f;
-    public float attackRange = 3f;
+    public float attackRange = 1f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -31,16 +31,20 @@ public class MotherBossRunStateMachine : StateMachineBehaviour
         mother.LookAtPlayer();
         Vector2 target = new Vector2(playerTransform.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
+
         if (Vector2.Distance(playerTransform.position, rb.position) <= attackRange)
         {
             animator.SetBool("Attack", true);
+        }
+        else
+        {
+            rb.MovePosition(newPos);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("Attack", false);
+        //animator.SetBool("Attack", false);
     }
 }
