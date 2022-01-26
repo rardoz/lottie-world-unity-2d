@@ -6601,7 +6601,7 @@ PrefabInstance:
     - target: {fileID: 9083830476558416520, guid: 7578a7035083c46c3902a0723da064b2,
         type: 3}
       propertyPath: followObjectOffsetY
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9083830476558416523, guid: 7578a7035083c46c3902a0723da064b2,
         type: 3}
@@ -7102,7 +7102,7 @@ PrefabInstance:
     - target: {fileID: 5644177164464402175, guid: bf13c7c2e6c414947b1d5ffae9f02119,
         type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 5644177164464402175, guid: bf13c7c2e6c414947b1d5ffae9f02119,
         type: 3}
@@ -7773,7 +7773,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 49.1}
 --- !u!1001 &1843042910
 PrefabInstance:
@@ -9027,7 +9027,7 @@ PrefabInstance:
     - target: {fileID: 397910387917294792, guid: 2ad0770978e454302b13f79214a9e644,
         type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 397910387917294792, guid: 2ad0770978e454302b13f79214a9e644,
         type: 3}
