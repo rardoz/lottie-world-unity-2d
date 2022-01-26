@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public abstract class Boss : MonoBehaviour
 {
@@ -37,6 +39,11 @@ public abstract class Boss : MonoBehaviour
             isFlipped = true;
         }
 
+    }
+
+    public virtual void NextLevel()
+    {
+        SceneManager.LoadScene("game-over");
     }
 
     public virtual void Attack()

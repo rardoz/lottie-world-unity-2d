@@ -17,8 +17,8 @@ public class BossLifeProgress : MonoBehaviour
     {
         if (transform.localScale.x <= 0)
         {
-            Reset();
-            //SceneManager.LoadScene("game-over"); //Load scene called Game
+            // Reset();
+            // SceneManager.LoadScene("C1S5");
         }
         else
         {

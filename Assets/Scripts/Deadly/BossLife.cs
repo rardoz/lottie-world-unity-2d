@@ -45,6 +45,10 @@ public class BossLife : MonoBehaviour
             //Add life to counter
             totalLives -= incriment;
             ScoreCounter.totalScore += pointValue;
+            if (totalLives == 0)
+            {
+                gameObject.GetComponent<Animator>().SetBool("Dead", true);
+            }
         }
     }
 }
