@@ -41,13 +41,13 @@ public class Exit : LevelStart
     protected virtual string awaredMessage3 => "This gives you a total of " + (awardAmount + ScoreCounter.totalScore) + "! Now we can book your next gig!";
     protected virtual string needMoreMessage => "You need " + (minPolaroids - RobotController.polaroidsEarned) + " more pictures before we can have some real food...";
 
-    void Start()
+    protected virtual void Start()
     {
         cam = Camera.main.GetComponent<CameraFollow>();
         cam.messageBubble.enabled = false;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (rb != null && cam.messageBubble.isDone)
         {
