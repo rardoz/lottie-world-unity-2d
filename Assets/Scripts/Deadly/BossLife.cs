@@ -5,8 +5,8 @@ using UnityEngine;
 public class BossLife : MonoBehaviour
 {
     //Keep track of total picked lives (Since the value is static, it can be accessed at "SC_2Dlife.totalLives" from any script)
-    public static int maxLives = 10;
-    public static int totalLives = 10;
+    public static int maxLives = 50;
+    public static int totalLives = 50;
 
     public static int pointValue = 100000;
 
