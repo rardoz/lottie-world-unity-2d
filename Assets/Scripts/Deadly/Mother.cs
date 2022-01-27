@@ -22,8 +22,8 @@ public class Mother : Boss
         base.Attack();
     }
 
-    public virtual void NextLevel()
+    public override void NextLevel()
     {
-        SceneManager.LoadScene("game-over");
+        SceneManager.LoadScene("C1S5Intro");
     }
 }

@@ -10248,5 +10248,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8250849483618802595, guid: f0cc40eee31214671a9fc07f0c5a3752,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0cc40eee31214671a9fc07f0c5a3752, type: 3}
