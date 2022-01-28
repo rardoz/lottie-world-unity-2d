@@ -1187,6 +1187,31 @@ MonoBehaviour:
   chapter: 1
   scene: 3
   identifier: 
+--- !u!1 &510640192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9133661787578523122, guid: 23e2735c32bd742db9b3d24464db294f,
+    type: 3}
+  m_PrefabInstance: {fileID: 9133661787247188563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &510640193
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510640192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d052c805d48ff44e48e89fb4da310d29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &529277638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2034,6 +2059,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!224 &748265283 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9133661787830074336, guid: 23e2735c32bd742db9b3d24464db294f,
+    type: 3}
+  m_PrefabInstance: {fileID: 9133661787247188563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &749974345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,6 +2141,93 @@ MonoBehaviour:
   isDone: 0
   messageBubble: {fileID: 0}
   storyTellerAnimator: {fileID: 0}
+--- !u!1 &813334160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813334161}
+  - component: {fileID: 813334163}
+  - component: {fileID: 813334162}
+  m_Layer: 5
+  m_Name: Title (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &813334161
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813334160}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 748265283}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.12, y: -0.91}
+  m_SizeDelta: {x: 977.8, y: 1033.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &813334162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813334160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9960785, g: 0.043137256, b: 0.7137255, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    m_FontSize: 31
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 1
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 0.72
+  m_Text: "KINKY SALAD MODEL\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nProduced
+    by Roe Greene\nand Joshua ballard\n\n\nCharacters\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nLottie
+    Winters \u2013 Joshua ballard\nSlayanne \u2013\_Roe Greene\nNatalie Winters \u2013
+    Natalie Alverez\nDwayne \u2013 Roe Greene\nDottie Summers - Flat Chested Mama\n\n\nMusic\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nKinky
+    Salad Model \u2013 Joshua ballard\nScore Producer \u2013 Roe Greene\n\n\nArt\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nArtist
+    \u2013 Roe Greene\nSoftware Engineer \u2013 Roe Greene\nStory Writer \u2013 Roe
+    Greene\n\n\n\nMade in New mexico, USA\n\n\nCOPYRIGHT 2022\nAll rights reserved\n\n\nFind
+    more at\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nLottieWinters.com\nSlayanne.com\n\n\n\nTO
+    BE CONTINUED..."
+--- !u!222 &813334163
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813334160}
+  m_CullTransparentMesh: 0
 --- !u!1 &875523172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,12 +4669,12 @@ PrefabInstance:
     - target: {fileID: 79789313183357770, guid: bb2b346fa2cd0418ca65beec0b3d75b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.03
+      value: 5.55
       objectReference: {fileID: 0}
     - target: {fileID: 79789313183357770, guid: bb2b346fa2cd0418ca65beec0b3d75b0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.28
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 79789313183357770, guid: bb2b346fa2cd0418ca65beec0b3d75b0,
         type: 3}
@@ -4890,10 +5008,25 @@ PrefabInstance:
       propertyPath: scene
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6660168974452168791, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9133661786054112605, guid: 23e2735c32bd742db9b3d24464db294f,
         type: 3}
       propertyPath: m_Text
       value: kinky salad modeling vs mom
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661786054112607, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787470508231, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133661787578523120, guid: 23e2735c32bd742db9b3d24464db294f,
         type: 3}
@@ -4908,7 +5041,7 @@ PrefabInstance:
     - target: {fileID: 9133661787578523122, guid: 23e2735c32bd742db9b3d24464db294f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133661787578523126, guid: 23e2735c32bd742db9b3d24464db294f,
         type: 3}
@@ -5020,12 +5153,70 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 9083830477571291623}
+    - target: {fileID: 9133661787830074336, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1033.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074336, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -824.1
+      objectReference: {fileID: 0}
     - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
         type: 3}
       propertyPath: m_Text
-      value: 'Chapter 1
-
-        Scene 4'
+      value: "KINKY SALAD MODEL\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nProduced
+        by Roe Greene\nand Joshua ballard\n\n\nCharacters\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nLottie
+        Winters \u2013 Joshua ballard\nSlayanne \u2013\_Roe Greene\nNatalie Winters
+        \u2013 Natalie Alverez\nDwayne \u2013 Roe Greene\nDottie Summers - Flat Chested
+        Mama\n\n\nMusic\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nKinky
+        Salad Model \u2013 Joshua ballard\nScore Producer \u2013 Roe Greene\n\n\nArt\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nArtist
+        \u2013 Roe Greene\nSoftware Engineer \u2013 Roe Greene\nStory Writer \u2013
+        Roe Greene\n\n\n\nMade in New mexico, USA\n\n\nCOPYRIGHT 2022\nAll rights
+        reserved\n\n\nFind more at\n\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\n\nLottieWinters.com\nSlayanne.com\n\n\n\nTO
+        BE CONTINUED..."
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133661787830074343, guid: 23e2735c32bd742db9b3d24464db294f,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5108153678893034911, guid: 23e2735c32bd742db9b3d24464db294f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 23e2735c32bd742db9b3d24464db294f, type: 3}
