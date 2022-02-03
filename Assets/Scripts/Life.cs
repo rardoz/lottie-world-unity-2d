@@ -40,6 +40,7 @@ public class Life : MonoBehaviour
                     totalLives = maxLives;
                 }
             }
+            player.PlayHealthSound();
             Destroy(gameObject);
         }
     }

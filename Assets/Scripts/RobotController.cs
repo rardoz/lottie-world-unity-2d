@@ -18,6 +18,20 @@ public class RobotController : MonoBehaviour
 
     public bool locked = false;
 
+    public AudioSource ding;
+
+    public AudioSource powerUp;
+
+    public void PlayDingSound()
+    {
+        ding.Play();
+    }
+
+    public void PlayHealthSound()
+    {
+        powerUp.Play();
+    }
+
     void Start()
     {
         animate = gameObject.GetComponent<Animator>();

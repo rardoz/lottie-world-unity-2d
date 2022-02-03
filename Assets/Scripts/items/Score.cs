@@ -28,10 +28,11 @@ public class Score : MonoBehaviour
     protected void AddToScore(int earnings)
     {
         ScoreCounter.totalScore += earnings;
+        RobotController player = GameObject.FindGameObjectWithTag("Player").GetComponent<RobotController>();
         PointPopUp ppu = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().pointPopUp;
         ppu.gameObject.SetActive(true);
         ppu.ShowPoints(earnings);
-
+        player.PlayDingSound();
         if (shouldDestroy)
         {
             Destroy(gameObject);

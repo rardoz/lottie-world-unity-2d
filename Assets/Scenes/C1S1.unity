@@ -1914,7 +1914,8 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Center.y
       value: -0.11762333
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8808226042864766902, guid: d9b5bf9c14c704782a5e0fd8d406abdd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d9b5bf9c14c704782a5e0fd8d406abdd, type: 3}
 --- !u!1001 &545249824
 PrefabInstance:
