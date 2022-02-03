@@ -28,7 +28,9 @@ public class Score : MonoBehaviour
     protected void AddToScore(int earnings)
     {
         ScoreCounter.totalScore += earnings;
-        GameObject.FindGameObjectWithTag("PointPopUp").GetComponent<PointPopUp>().ShowPoints(earnings);
+        PointPopUp ppu = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().pointPopUp;
+        ppu.gameObject.SetActive(true);
+        ppu.ShowPoints(earnings);
 
         if (shouldDestroy)
         {

@@ -9,6 +9,8 @@ public class PointPopUp : MonoBehaviour
     private bool isCoroutineExecuting = false;
     public float clearDelay = 1.0f;
     Text label;
+
+    IEnumerator enumerator;
     public void Start()
     {
         label = GetComponent<Text>();
@@ -16,8 +18,18 @@ public class PointPopUp : MonoBehaviour
     }
     public void ShowPoints(int points)
     {
+        if (enumerator != null)
+        {
+            StopCoroutine(enumerator);
+            gameObject.GetComponent<Animation>().Rewind();
+            gameObject.GetComponent<Animation>().Play();
+            enumerator = null;
+        }
+        label = label ? label : GetComponent<Text>();
         label.text = (points > 0 ? "+" : "-") + points;
-        StartCoroutine(ExecuteAfterTime(clearDelay));
+
+        enumerator = ExecuteAfterTime(clearDelay);
+        StartCoroutine(enumerator);
     }
 
     void ClearText()
@@ -31,9 +43,9 @@ public class PointPopUp : MonoBehaviour
             yield break;
 
         isCoroutineExecuting = true;
-
         yield return new WaitForSeconds(time);
         ClearText();
         isCoroutineExecuting = false;
+        GetComponent<GameObject>().SetActive(false);
     }
 }

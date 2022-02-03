@@ -2454,6 +2454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &601759824
@@ -4531,6 +4532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1166497897
@@ -5392,6 +5394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1379251463
@@ -5518,6 +5521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1383601855
@@ -5754,6 +5758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1453533598
@@ -6365,6 +6370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2530868197076010866, guid: 7578a7035083c46c3902a0723da064b2,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1001.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530868197076010866, guid: 7578a7035083c46c3902a0723da064b2,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: -670.32
       objectReference: {fileID: 0}
@@ -6655,6 +6665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1634850919
@@ -7042,6 +7053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1658961815
@@ -7752,6 +7764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1768272580
@@ -8516,6 +8529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 0}
+  infinitLives: 0
 --- !u!1001 &2054346044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8760,6 +8774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &2090947499
@@ -8886,6 +8901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &2108336277

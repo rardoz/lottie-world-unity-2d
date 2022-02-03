@@ -18,6 +18,8 @@ public class CameraFollow : MonoBehaviour
 
     public Story messageBubble;
 
+    public PointPopUp pointPopUp;
+
     // Start is called before the first frame update
     void Start()
     {

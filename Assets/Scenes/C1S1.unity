@@ -2091,6 +2091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &601759824
@@ -3610,6 +3611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1166497897
@@ -3920,6 +3922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1379251463
@@ -4046,6 +4049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1383601855
@@ -4282,6 +4286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1453533598
@@ -4650,6 +4655,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 9083830477616585237, guid: 7578a7035083c46c3902a0723da064b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7578a7035083c46c3902a0723da064b2, type: 3}
 --- !u!1 &1601528045 stripped
@@ -4731,6 +4741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1634850919
@@ -4857,6 +4868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1658961815
@@ -5160,6 +5172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &1768272580
@@ -5337,6 +5350,7 @@ MonoBehaviour:
   identifier: Intro
   timerCounter: {fileID: 61108651}
   minPolaroids: 10
+  shouldWaitForExitAnimation: 0
   awardAmount: 0
 --- !u!61 &1845280927
 BoxCollider2D:
@@ -6314,6 +6328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &2090947499
@@ -6530,6 +6545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incriment: 1
   player: {fileID: 450870612}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!212 &2108336277
