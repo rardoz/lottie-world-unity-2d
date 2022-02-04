@@ -111,7 +111,6 @@ public class RobotController : MonoBehaviour
 
     void PlayerMove()
     {
-
         animate.SetFloat("Speed", 1);
         //Physics
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * Playerspeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
@@ -135,7 +134,6 @@ public class RobotController : MonoBehaviour
             JumpCount -= 1;
         }
     }
-
 
     IEnumerator ExecuteAfterTime(float time)
     {
