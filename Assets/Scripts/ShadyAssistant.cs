@@ -85,7 +85,7 @@ public class ShadyAssistant : Death
         }
     }
 
-    void OnTriggerEnter2D(Collider2D c2d)
+    public override void OnTriggerEnter2D(Collider2D c2d)
     {
         bool isPhoto = c2d.CompareTag("Polaroid");
         if (isPhoto)
@@ -99,5 +99,6 @@ public class ShadyAssistant : Death
         polaroids.Remove(polaroid);
         totalLives--;
         Destroy(polaroid.GetComponentInParent<TakePicture>().gameObject);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<RobotController>().PlayErrorSound();
     }
 }

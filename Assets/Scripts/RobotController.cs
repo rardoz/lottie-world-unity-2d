@@ -24,6 +24,8 @@ public class RobotController : MonoBehaviour
 
     public AudioSource brushSound;
 
+    public AudioSource errorSound;
+
     public void PlayDingSound()
     {
         ding.Play();
@@ -34,8 +36,18 @@ public class RobotController : MonoBehaviour
         powerUp.Play();
     }
 
+
+    public void PlayErrorSound()
+    {
+        errorSound.Play();
+    }
+
     public void PlayBrushSound()
     {
+        if (brushSound.isPlaying)
+        {
+            StopBrushSound();
+        }
         brushSound.Play();
     }
 
