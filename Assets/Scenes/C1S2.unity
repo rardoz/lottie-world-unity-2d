@@ -8680,7 +8680,7 @@ PrefabInstance:
     - target: {fileID: 6511209999501532092, guid: 14a472ab9a7f04b3f9756882cf760ff6,
         type: 3}
       propertyPath: m_Name
-      value: trailer-1
+      value: Trailer
       objectReference: {fileID: 0}
     - target: {fileID: 6511209999501532093, guid: 14a472ab9a7f04b3f9756882cf760ff6,
         type: 3}
