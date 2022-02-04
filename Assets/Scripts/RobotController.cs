@@ -26,6 +26,8 @@ public class RobotController : MonoBehaviour
 
     public AudioSource errorSound;
 
+    public AudioSource whooshSound;
+
     public void PlayDingSound()
     {
         ding.Play();
@@ -40,6 +42,15 @@ public class RobotController : MonoBehaviour
     public void PlayErrorSound()
     {
         errorSound.Play();
+    }
+
+    public void PlayWhooshSound()
+    {
+        if (whooshSound.isPlaying)
+        {
+            whooshSound.Stop();
+        }
+        whooshSound.Play();
     }
 
     public void PlayBrushSound()
@@ -109,6 +120,7 @@ public class RobotController : MonoBehaviour
     public void ShootAnimation()
     {
         animate.SetFloat("Fire", 1);
+        PlayWhooshSound();
         StartCoroutine(ExecuteAfterTime(0.30f));
     }
 
