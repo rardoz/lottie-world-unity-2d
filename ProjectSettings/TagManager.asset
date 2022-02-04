@@ -20,6 +20,7 @@ TagManager:
   - Boss
   - BossHealthBar
   - Cactus
+  - BackgroundAudio
   layers:
   - Default
   - TransparentFX
