@@ -73,7 +73,6 @@
      <Compile Include="Assets/Scripts/MultiStory.cs" />
      <Compile Include="Assets/Scripts/Ground.cs" />
      <Compile Include="Assets/Scripts/LevelStart.cs" />
-     <Compile Include="Assets/Sprites/4000+SinplePixelIconPack/Scripts/MoveDemo.cs" />
      <Compile Include="Assets/Scripts/Deadly/Pit.cs" />
      <Compile Include="Assets/Scripts/AnimationEvents/PolaroidLandingAnimationEvent.cs" />
      <Compile Include="Assets/Scripts/Deadly/TumbleweedTrigger.cs" />
@@ -112,32 +111,6 @@
      <Compile Include="Assets/Scripts/LifeProgress.cs" />
      <Compile Include="Assets/Scripts/Stories/DwayneStory.cs" />
      <Compile Include="Assets/Scripts/PlayerSoundEffects.cs" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" />
-     <None Include="Assets/Sprites/SimplePixelUI/fonts/Font2/license.txt" />
-     <None Include="Assets/Sprites/4000+SinplePixelIconPack/readme_ja.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets/Sprites/FreePixelFood/ReadMe.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" />
-     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
-     <None Include="Assets/Sprites/SimplePixelUI/fonts/Font1/license.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" />
-     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" />
-     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-     <None Include="Assets/Sprites/SimplePixelUI/fonts/Font1/readme.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets/Sprites/SimplePixelUI/fonts/Font2/readme.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" />
-     <None Include="Assets/Sprites/4000+SinplePixelIconPack/readme_en.txt" />
-     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader" />
-     <None Include="Assets/Sprites/Nature_pixel_art_assets/pixel_snapping_README.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
