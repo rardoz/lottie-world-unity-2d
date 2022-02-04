@@ -148,8 +148,6 @@ public class Exit : LevelStart
 
     protected virtual void SayExtra()
     {
-        // cam.messageBubble.storyLines.SetValue("test", cam.messageBubble.storyLines.Length);
-        // cam.messageBubble.SetStoryLines(cam.messageBubble.storyLines);
     }
 
     void StartNextLevel()
@@ -194,6 +192,7 @@ public class Exit : LevelStart
 
     void CountdownRemainingSeconds()
     {
+        GetComponent<AudioSource>().Play();
         timerCounter.FastForward();
     }
 
