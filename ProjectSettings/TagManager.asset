@@ -19,6 +19,7 @@ TagManager:
   - PointPopUp
   - Boss
   - BossHealthBar
+  - Cactus
   layers:
   - Default
   - TransparentFX

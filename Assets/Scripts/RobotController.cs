@@ -22,6 +22,8 @@ public class RobotController : MonoBehaviour
 
     public AudioSource powerUp;
 
+    public AudioSource brushSound;
+
     public void PlayDingSound()
     {
         ding.Play();
@@ -31,6 +33,18 @@ public class RobotController : MonoBehaviour
     {
         powerUp.Play();
     }
+
+    public void PlayBrushSound()
+    {
+        brushSound.Play();
+    }
+
+
+    public void StopBrushSound()
+    {
+        brushSound.Stop();
+    }
+
 
     void Start()
     {
@@ -125,7 +139,6 @@ public class RobotController : MonoBehaviour
     {
         bool isGround = Col.gameObject.tag == "Ground";
         bool isBarrier = Col.gameObject.tag == "Barrier";
-
         if (isGround || isBarrier)
         {
             JumpCount = MaxJumps;

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5644177164464402174}
   m_Layer: 0
   m_Name: cactus-2
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -119852827
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 012565f351dde49c1ad7724c175a2db8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f9b65a19fc342ad832ad31de91c05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  incriment: 1
   player: {fileID: 0}
+  infinitLives: 0
   shouldDestroy: 0
   blinker: {fileID: 0}
 --- !u!61 &5644177164464402174

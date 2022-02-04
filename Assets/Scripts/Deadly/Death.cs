@@ -54,7 +54,7 @@ public class Death : Life
         }
     }
 
-    void OnTriggerEnter2D(Collider2D c2d)
+    public virtual void OnTriggerEnter2D(Collider2D c2d)
     {
         OnTriggerEntered(c2d);
     }
