@@ -4585,6 +4585,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2860224769439407058, guid: 7578a7035083c46c3902a0723da064b2,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860224769439407058, guid: 7578a7035083c46c3902a0723da064b2,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1597222585
+      objectReference: {fileID: 0}
     - target: {fileID: 9083830476558416520, guid: 7578a7035083c46c3902a0723da064b2,
         type: 3}
       propertyPath: followObject
