@@ -97,6 +97,7 @@
      <Compile Include="Assets/Scripts/items/Polaroid.cs" />
      <Compile Include="Assets/Scripts/Interpolation/InterpolationController.cs" />
      <Compile Include="Assets/Scripts/Deadly/DeathPlant.cs" />
+     <Compile Include="Assets/Scripts/PlayerSoundEffects.cs" />
      <Compile Include="Assets/Scripts/Flash.cs" />
      <Compile Include="Assets/Scripts/items/CornCounter.cs" />
      <Compile Include="Assets/Scripts/StateMachines/MotherBossRunStateMachine.cs" />
@@ -110,7 +111,7 @@
      <Compile Include="Assets/Scripts/Coin.cs" />
      <Compile Include="Assets/Scripts/LifeProgress.cs" />
      <Compile Include="Assets/Scripts/Stories/DwayneStory.cs" />
-     <Compile Include="Assets/Scripts/PlayerSoundEffects.cs" />
+     <Compile Include="Assets/Scripts/Credits.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
