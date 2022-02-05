@@ -16,7 +16,7 @@ public class Death : Life
 
     void Awake()
     {
-        //infinitLives = true;
+        infinitLives = true;
         // do nothing override to prevent bug
         if (Camera.main.GetComponent<CameraFollow>())
         {
