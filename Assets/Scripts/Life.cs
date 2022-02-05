@@ -34,6 +34,7 @@ public class Life : MonoBehaviour
                 if ((totalLives - incriment >= maxLives))
                 {
                     ScoreCounter.totalScore += pointValue;
+                    totalLives = maxLives;
                 }
                 else
                 {
