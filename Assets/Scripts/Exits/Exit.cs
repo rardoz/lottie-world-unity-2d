@@ -74,7 +74,7 @@ public class Exit : LevelStart
         }
     }
 
-    private void NextLevel()
+    protected void NextLevel()
     {
         Life.totalLives = Life.maxLives;
         RobotController.polaroidsEarned = 0;

@@ -18,7 +18,6 @@ public class Mother : Boss
 {
     public override void Attack()
     {
-        //Debug.Log("TODO");
         base.Attack();
     }
 

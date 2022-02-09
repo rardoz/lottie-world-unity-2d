@@ -2617,7 +2617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03651fea1135468cb667a4026d291a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incriment: 1
+  incriment: 5
   player: {fileID: 0}
   infinitLives: 0
   healthBar: {fileID: 477845589}

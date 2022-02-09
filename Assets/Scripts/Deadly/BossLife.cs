@@ -34,6 +34,11 @@ public class BossLife : MonoBehaviour
         {
             healthBar.SetActive(false);
         }
+
+        if (totalLives <= 0)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Dead", true);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D c2d)
@@ -45,7 +50,7 @@ public class BossLife : MonoBehaviour
             //Add life to counter
             totalLives -= incriment;
             ScoreCounter.totalScore += pointValue;
-            if (totalLives == 0)
+            if (totalLives <= 0)
             {
                 gameObject.GetComponent<Animator>().SetBool("Dead", true);
             }

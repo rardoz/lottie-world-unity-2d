@@ -12,6 +12,6 @@ public class Banana : Death
 
     public override void onDeadlyTriggered(Collider2D c2d)
     {
-        Camera.main.GetComponent<CameraFollow>().followObject.GetComponent<RobotController>().animate.SetBool("Slip", true);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<RobotController>().animate.SetBool("Slip", true);
     }
 }

@@ -36,7 +36,7 @@ public class SlayanneExitStory : Exit
     {
         if (message.Equals("SlayanneExitFinished"))
         {
-            GoToNextLevel();
+            NextLevel();
         }
     }
 }

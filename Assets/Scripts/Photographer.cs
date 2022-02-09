@@ -83,9 +83,13 @@ public class Photographer : MonoBehaviour
 
     private Vector3 calculateThreshold()
     {
-        Vector2 t = new Vector2(player.transform.position.x, 0);
-        t.x -= followOffset.x;
-        return t;
+        if (player)
+        {
+            Vector2 t = new Vector2(player.transform.position.x, 0);
+            t.x -= followOffset.x;
+            return t;
+        }
+        return new Vector2(transform.position.x, transform.position.y);
     }
 
     public void OnDrawGizmos()
