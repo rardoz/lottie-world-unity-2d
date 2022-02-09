@@ -14,6 +14,6 @@ public class BearTrap : Death
     }
 
     public void KillAnimationEvent() {
-        Destroy(gameObject, destoryDelay);
+        Destroy(gameObject);
     }
 }
