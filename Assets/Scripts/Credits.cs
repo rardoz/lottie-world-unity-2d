@@ -14,7 +14,7 @@ public class Credits : MonoBehaviour
         // insure a full press so we don't accidently skip the game over screen when we die
         if (Input.GetButtonUp("Jump") && creditsFinished)
         {
-            SceneManager.LoadScene("C1S1Intro");
+            SceneManager.LoadScene("Main");
         }
     }
 

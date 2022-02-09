@@ -9,7 +9,7 @@ public class SlipAnimationEvent : MonoBehaviour
     {
         if (message.Equals("SlipFinished"))
         {
-            Camera.main.GetComponent<CameraFollow>().followObject.GetComponent<RobotController>().animate.SetBool("Slip", false);
+            GetComponent<Animator>().SetBool("Slip", false);
         }
     }
 }

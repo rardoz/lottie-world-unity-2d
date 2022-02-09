@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class LifeProgress : MonoBehaviour
 {
-
     void Reset()
     {
         Life.totalLives = Life.maxLives;
+        ScoreCounter.totalScore = 0;
         transform.localScale = new Vector2(1.0f, transform.localScale.y);
     }
     // Update is called once per frame
