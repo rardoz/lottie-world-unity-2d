@@ -111,25 +111,34 @@ public class Story : MonoBehaviour
 
     void Update()
     {
-        if (shouldPause)
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (Input.GetButtonDown("Jump") && !isDone)
-            {
-                ContinueToNextStoryLine();
-            }
-            else if (Input.GetButtonDown("Jump") && isDone)
-            {
-                OnFinishedStoryLines();
-            }
-            return;
+            OnFinishedStoryLines();
         }
-
-        //this is the letter delay
-        readingTimer += Time.deltaTime;
-        if (readingTimer >= readingMiniDuration / 4.0f || Input.GetButtonUp("Jump"))
+        else
         {
-            readingTimer = 0.0f;
-            RenderStoryLine();
+
+
+            if (shouldPause)
+            {
+                if (Input.GetButtonDown("Jump") && !isDone)
+                {
+                    ContinueToNextStoryLine();
+                }
+                else if (Input.GetButtonDown("Jump") && isDone)
+                {
+                    OnFinishedStoryLines();
+                }
+                return;
+            }
+
+            //this is the letter delay
+            readingTimer += Time.deltaTime;
+            if (readingTimer >= readingMiniDuration / 4.0f || Input.GetButtonUp("Jump"))
+            {
+                readingTimer = 0.0f;
+                RenderStoryLine();
+            }
         }
     }
 }

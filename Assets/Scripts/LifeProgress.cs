@@ -10,6 +10,7 @@ public class LifeProgress : MonoBehaviour
     {
         Life.totalLives = Life.maxLives;
         ScoreCounter.totalScore = 0;
+        RobotController.polaroidsEarned = 0;
         transform.localScale = new Vector2(1.0f, transform.localScale.y);
     }
     // Update is called once per frame
